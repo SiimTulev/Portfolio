@@ -8,11 +8,7 @@
 @{
     //Layout = null;
     Layout = "~/Views/Shared/EnableBlazor.cshtml";
-
-
-
 }
-
 
 
 @(await Html.RenderComponentAsync<WebGame.Components.Portfolio>(RenderMode.ServerPrerendered))
@@ -21,20 +17,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-@*<div class="my-container" id="about"></div>
-    <div class="my-container" id="team"></div>
-    <div class="my-container" id="services"></div>
-    <div class="my-container" id="work"></div>
-    <div class="my-container" id="contact"></div>*@
-
-
-@*<script src="_framework/blazor.server.js"></script>*@
-
 
 <head>
     <link rel="stylesheet" href="~/css/main.css">
 </head>
-@*<body onload="getMenuWhatViewingAfterLoading()">*@
 <body>
 
     <div class="toolbar">
@@ -49,47 +35,7 @@
             </nav>
         </div>
     </div>
-
-    @*<script src="~/js/menuspy.js"></script>
-        <script>
-            var elm = document.querySelector('#main-header');
-            var ms = new MenuSpy(elm);
-        </script>*@
 </body>
-
-<!--<main>
-    <!--<section id="home">-->
-<!--<div class="inner">
-        <h1>Home</h1>
-    </div>-->
-<!--</section>
-
-<section id="section-1">
-    <!--<
--->
-<!--@*div class="inner">*@
-            <h2>Section 1</h2>
-        </div>-->
-<!--</section>
-
-<section id="section-2">-->
-<!--<div class="inner">
-        <h2>Section 2</h2>
-    </div>-->
-<!--</section>
-
-<section id="section-3">-->
-<!--<div class="inner">
-            <h2>Section 3</h2>
-        </div>
-    </section>
-</main>-->
-@*<script src="~/js/menuspy.js"></script>
-    <script>
-        var elm = document.querySelector('#main-header');
-        var ms = new MenuSpy(elm);
-    </script>*@
-
 
 <style>
     li {
@@ -97,10 +43,6 @@
         flex-direction: row;
         align-items: center;
     }
-
-    /*      .sidemenu {
-                position: absolute;
-            }*/
 </style>
 
 <script>
@@ -140,15 +82,9 @@
         return mostVisibleElement;
     }
 
-
-
-
-    //document.getElementById("myFrame").addEventListener("load", onLoad);
-
     var x = "";
     var mostVisibleSaveLast = null;
 
-    //function getMenuWhatViewingAfterLoading() {
     $(window).ready(function () {
 
         var mostVisible = getMostVisibleElement('.my-container');
@@ -157,8 +93,7 @@
         $(x).addClass('active');
 
         //   alert("Page is loaded");
-
-        //console.log("ASDASD   "+x);
+        //console.log("testtest   "+x);
     });
 
     $(window).scroll(function () {
@@ -171,7 +106,7 @@
             $(mostVisibleSaveLast).removeClass('active');
             mostVisibleSaveLast = x;
 
-             x = document.getElementsByClassName("b" + mostVisible.id);
+            x = document.getElementsByClassName("b" + mostVisible.id);
             $(x).addClass('active');
 
 
@@ -181,7 +116,7 @@
     });
 
 
-    //Töötab
+    //Works
     window.blazorHelpers = {
         scrollToFragment: (elementId) => {
             var element = document.getElementById(elementId);
@@ -199,22 +134,8 @@
         },
     };
 
-     //window.scrolling = {
-        //    scrollTo: () => { top: 900, behavior: 'smooth' }
-            //scrollTo: (elementId) => {
-            //    var element = document.getElementById(elementId);
-
-            //    if (element) {
-            //        element.scrollIntoView({
-            //            behavior: 'smooth'
-            //        });
-            //    }
-            //}
 
 
-    /*----------------------------------------------------*/
-    /* Quote Loop
-    ------------------------------------------------------ */
 
     function fade($ele) {
         $ele.fadeIn(1000).delay(3000).fadeOut(1000, function () {
@@ -224,10 +145,6 @@
     }
     fade($('.quoteLoop > .quote').first());
 
-
-    /*----------------------------------------------------*/
-    /* Navigation
-    ------------------------------------------------------ */
 
     $(window).scroll(function () {
 
@@ -278,19 +195,6 @@
 
 
     TweenMax.staggerFrom(".heading", 0.8, { opacity: 0, y: 20, delay: 0.2 }, 0.4);
-
-    //////////////////
-
-
-
-
-
-
-@{
-
-
-
-}
 </script>
 
 
