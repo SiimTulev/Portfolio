@@ -1,0 +1,95 @@
+﻿
+
+<head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebGame</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <base href="/">
+    @*<link href="~/css/portfolio.css" rel="stylesheet" />*@
+
+</head>
+
+
+
+
+@*<div class="container">*@
+<main role="main">
+    @RenderBody()
+</main>
+@*</div>*@
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+<script src="_framework/blazor.server.js"></script>
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+
+<script>
+
+    //window.blazorHelpers = {
+    //    scrollToFragment: (elementId) => {
+    //        var element = document.getElementById(elementId);
+
+    //        if (element) {
+    //            element.scrollIntoView({
+    //                behavior: 'smooth'
+    //            });
+    //        }
+    //    },
+    //    ScrollIn: (id) => {
+    //        let element = document.getElementById(id);
+    //        console.log(!!element ? "SCROLLIN" : "NO FOUND ELE", id);
+    //        if (!!element) { element.scrollIntoView(); }
+    //    },
+    //};
+
+
+    //TööTAB
+    //window.blazorHelpers = {
+    //    scrollToFragment: (elementId) => {
+    //        var element = document.getElementById(elementId);
+
+    //        if (element) {
+    //            element.scrollIntoView({
+    //                behavior: 'smooth'
+    //            });
+    //        }
+    //    },
+    //    ScrollIn: (id) => {
+    //        let element = document.getElementById(id);
+    //        console.log(!!element ? "SCROLLIN" : "NO FOUND ELE", id);
+    //        if (!!element) { element.scrollIntoView(); }
+    //    },
+
+        //};
+        //window.scrolling = {
+        //    scrollTo: () => { top: 900, behavior: 'smooth' }
+            //scrollTo: (elementId) => {
+            //    var element = document.getElementById(elementId);
+
+            //    if (element) {
+            //        element.scrollIntoView({
+            //            behavior: 'smooth'
+            //        });
+            //    }
+            //}
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,325 @@
+﻿@using System.Web;
+@using System.Security.Claims;
+@using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.EntityFrameworkCore
+
+
+@{
+    //Layout = null;
+    Layout = "~/Views/Shared/EnableBlazor.cshtml";
+
+
+
+}
+
+
+
+@(await Html.RenderComponentAsync<WebGame.Components.Portfolio>(RenderMode.ServerPrerendered))
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+@*<div class="my-container" id="about"></div>
+    <div class="my-container" id="team"></div>
+    <div class="my-container" id="services"></div>
+    <div class="my-container" id="work"></div>
+    <div class="my-container" id="contact"></div>*@
+
+
+@*<script src="_framework/blazor.server.js"></script>*@
+
+
+<head>
+    <link rel="stylesheet" href="~/css/main.css">
+</head>
+@*<body onload="getMenuWhatViewingAfterLoading()">*@
+<body>
+
+    <div class="toolbar">
+        <div id="main-header" class="side-menu">
+            <nav>
+                <li id="home1" class="Bhome"><a href="#home"><span>home</span></a></li>
+                <li id="about1" class="Babout"><a href="#about"><span>about</span></a></li>
+                <li id="team1" class="Bteam">  <a href="#team"> <span>team</span></a></li>
+                <li id="services1" class="Bservices"> <a href="#services"><span>services</span></a></li>
+                <li id="work1" class="Bwork"><a href="#work"><span>work</span></a></li>
+                <li id="contact1" class="Bcontact"><a href="#contact"><span>contact</span></a></li>
+            </nav>
+        </div>
+    </div>
+
+    @*<script src="~/js/menuspy.js"></script>
+        <script>
+            var elm = document.querySelector('#main-header');
+            var ms = new MenuSpy(elm);
+        </script>*@
+</body>
+
+<!--<main>
+    <!--<section id="home">-->
+<!--<div class="inner">
+        <h1>Home</h1>
+    </div>-->
+<!--</section>
+
+<section id="section-1">
+    <!--<
+-->
+<!--@*div class="inner">*@
+            <h2>Section 1</h2>
+        </div>-->
+<!--</section>
+
+<section id="section-2">-->
+<!--<div class="inner">
+        <h2>Section 2</h2>
+    </div>-->
+<!--</section>
+
+<section id="section-3">-->
+<!--<div class="inner">
+            <h2>Section 3</h2>
+        </div>
+    </section>
+</main>-->
+@*<script src="~/js/menuspy.js"></script>
+    <script>
+        var elm = document.querySelector('#main-header');
+        var ms = new MenuSpy(elm);
+    </script>*@
+
+
+<style>
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*      .sidemenu {
+                position: absolute;
+            }*/
+</style>
+
+<script>
+
+    function getMostVisibleElement(selector) {
+        var clientRect = null;
+        var clientRectTop = 0;
+        var maxVisibleHeight = 0;
+        var visibleHeightOfElem = 0;
+        var mostVisibleElement = null;
+        var skipRest = false;
+
+        var visibleElems = $(selector).each(function (i, element) {
+            if (skipRest === false) {
+                clientRect = element.getBoundingClientRect();
+                clientRectTop = Math.abs(clientRect.top);
+
+                if (clientRect.top >= 0) {
+                    visibleHeightOfElem = window.innerHeight - clientRectTop;
+                } else {
+                    visibleHeightOfElem = clientRect.height - clientRectTop;
+                }
+
+                if (visibleHeightOfElem >= clientRect.height) {
+                    mostVisibleElement = element;
+                    skipRest = true;
+                } else {
+
+                    if (visibleHeightOfElem > maxVisibleHeight) {
+                        maxVisibleHeight = visibleHeightOfElem;
+                        mostVisibleElement = element;
+                    }
+                }
+
+            }
+        });
+        return mostVisibleElement;
+    }
+
+
+
+
+    //document.getElementById("myFrame").addEventListener("load", onLoad);
+
+    var x = "";
+    var mostVisibleSaveLast = null;
+
+    //function getMenuWhatViewingAfterLoading() {
+    $(window).ready(function () {
+
+        var mostVisible = getMostVisibleElement('.my-container');
+
+        x = document.getElementsByClassName("b" + mostVisible.id);
+        $(x).addClass('active');
+
+        //   alert("Page is loaded");
+
+        //console.log("ASDASD   "+x);
+    });
+
+    $(window).scroll(function () {
+        var mostVisible = getMostVisibleElement('.my-container');
+        x = document.getElementsByClassName("b" + mostVisible.id);
+
+
+        if (mostVisibleSaveLast != x) {
+
+            $(mostVisibleSaveLast).removeClass('active');
+            mostVisibleSaveLast = x;
+
+             x = document.getElementsByClassName("b" + mostVisible.id);
+            $(x).addClass('active');
+
+
+
+        }
+
+    });
+
+
+    //Töötab
+    window.blazorHelpers = {
+        scrollToFragment: (elementId) => {
+            var element = document.getElementById(elementId);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        },
+        ScrollIn: (id) => {
+            let element = document.getElementById(id);
+            console.log(!!element ? "SCROLLIN" : "NO FOUND ELE", id);
+            if (!!element) { element.scrollIntoView(); }
+        },
+    };
+
+     //window.scrolling = {
+        //    scrollTo: () => { top: 900, behavior: 'smooth' }
+            //scrollTo: (elementId) => {
+            //    var element = document.getElementById(elementId);
+
+            //    if (element) {
+            //        element.scrollIntoView({
+            //            behavior: 'smooth'
+            //        });
+            //    }
+            //}
+
+
+    /*----------------------------------------------------*/
+    /* Quote Loop
+    ------------------------------------------------------ */
+
+    function fade($ele) {
+        $ele.fadeIn(1000).delay(3000).fadeOut(1000, function () {
+            var $next = $(this).next('.quote');
+            fade($next.length > 0 ? $next : $(this).parent().children().first());
+        });
+    }
+    fade($('.quoteLoop > .quote').first());
+
+
+    /*----------------------------------------------------*/
+    /* Navigation
+    ------------------------------------------------------ */
+
+    $(window).scroll(function () {
+
+        if ($(window).scrollTop() > 300) {
+            $('.main_nav').addClass('sticky');
+        } else {
+            $('.main_nav').removeClass('sticky');
+        }
+    });
+
+    // Mobile Navigation
+    $('.mobile-toggle').click(function () {
+        if ($('.main_nav').hasClass('open-nav')) {
+            $('.main_nav').removeClass('open-nav');
+        } else {
+            $('.main_nav').addClass('open-nav');
+        }
+    });
+
+    $('.main_nav li a').click(function () {
+        if ($('.main_nav').hasClass('open-nav')) {
+            $('.navigation').removeClass('open-nav');
+            $('.main_nav').removeClass('open-nav');
+        }
+    });
+
+
+    /*----------------------------------------------------*/
+    /* Smooth Scrolling
+    ------------------------------------------------------ */
+
+    jQuery(document).ready(function ($) {
+
+        $('.smoothscroll').on('click', function (e) {
+            e.preventDefault();
+
+            var target = this.hash,
+                $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 800, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+
+    });
+
+
+    TweenMax.staggerFrom(".heading", 0.8, { opacity: 0, y: 20, delay: 0.2 }, 0.4);
+
+    //////////////////
+
+
+
+
+
+
+@{
+
+
+
+}
+</script>
+
+
+<style>
+
+    .my-container {
+    }
+
+    /*   #about1 {
+                background: #007bff;
+            }
+
+            #team1 {
+                background: #28a745;
+            }
+
+            #services1 {
+                background: #ffc107;
+            }
+
+            #work1 {
+                background: #b6ff00;
+            }
+
+            #contact1 {
+                background: #17a2b8;
+            }*/
+
+    /* .highlighted {
+                background: #dc3545 !important;
+            }*/
+</style>
