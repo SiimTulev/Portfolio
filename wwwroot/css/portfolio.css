@@ -36,7 +36,7 @@ body {
 }
 
 /* For devices larger than 400px */
-@@media (min-width: 400px) {
+@media (min-width: 400px) {
     .container {
         width: 85%;
         padding: 0;
@@ -44,7 +44,7 @@ body {
 }
 
 /* For devices larger than 550px */
-@@media (min-width: 550px) {
+@media (min-width: 550px) {
     .container {
         width: 80%;
     }
@@ -241,7 +241,7 @@ h6 {
 }
 
 /* Larger than phablet */
-@@media (min-width: 550px) {
+@media (min-width: 550px) {
     h1 {
         font-size: 5rem;
     }
@@ -338,7 +338,7 @@ header {
         margin-top: 50px;
     }
 
-@@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 700px) {
     .title h1 {
         font-size: 80px;
     }
@@ -350,7 +350,7 @@ header {
     line-height: 150%;
 }
 
-@@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .title h1 {
         font-size: 65px;
     }
@@ -377,7 +377,7 @@ header {
     padding-bottom: 6px;
 }
 
-@@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
     .main_nav {
         padding-top: 25px;
     }
@@ -398,7 +398,7 @@ nav {
     margin-top: 5px;
 }
 
-@@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
     nav {
         width: 100%;
     }
@@ -410,7 +410,7 @@ nav ul {
     text-align: center;
 }
 
-@@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
     nav ul {
         padding-top: 0px;
         margin-bottom: 22px;
@@ -426,7 +426,7 @@ nav ul li {
     letter-spacing: 1px;
 }
 
-@@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
     nav ul li {
         width: 100%;
         padding: 7px 0;
@@ -460,7 +460,7 @@ nav ul a {
     width: 30px;
 }
 
-@@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 766px) {
     .mobile-toggle {
         display: block;
     }
@@ -498,7 +498,7 @@ nav ul a {
 }
 
 /*animated scroll arrow animation*/
-@@-webkit-keyframes fade_move_down {
+@-webkit-keyframes fade_move_down {
     0% {
         -webkit-transform: translate(0, -10px) rotate(45deg);
         opacity: 0;
@@ -514,7 +514,7 @@ nav ul a {
     }
 }
 
-@@-moz-keyframes fade_move_down {
+@-moz-keyframes fade_move_down {
     0% {
         -moz-transform: translate(0, -10px) rotate(45deg);
         opacity: 0;
@@ -530,7 +530,7 @@ nav ul a {
     }
 }
 
-@@keyframes fade_move_down {
+@keyframes fade_move_down {
     0% {
         transform: translate(0, -10px) rotate(45deg);
         opacity: 0;
