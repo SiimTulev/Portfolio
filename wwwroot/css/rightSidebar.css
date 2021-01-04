@@ -10,8 +10,9 @@ html {
     height: 100%;
 }
 
-@media (max-width:1410px) { /*Remove side-menu if screen is too small*/
-    .toolbar {
+@media (max-width:766px) {
+/*    Remove side-menu if screen is too small ORIGINAL 1410px
+*/    .toolbar {
         display: none;
     }
 }
@@ -60,6 +61,7 @@ html {
         }
 
     .side-menu span {
+        font-size: 1.1vw;
         display: block;
         position: absolute;
         right: 32px;
