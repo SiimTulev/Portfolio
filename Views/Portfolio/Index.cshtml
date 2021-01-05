@@ -39,9 +39,9 @@
     </div>
     <div class="container my-container title" id="home">
         <div><span class="typcn typcn-heart-outline icon heading"></span></div>
-        <div class="smallsep heading"></div>
-        <h1 class="heading"> Clean & Simple</h1>
-        <h2 class="heading">Lorem ipsum dolor sit amet</h2>
+        @*<div class="smallsep heading"></div>*@
+    <h1 class="heading"><span class="firstName">Siim</span>  <span class="lastName">Tulev</span> </h1>
+        <h2 class="heading"><span class="workName">Web Developer & Designer</span></h2>
         <a class="smoothscroll"
 
             <div class="mouse">
@@ -49,8 +49,8 @@
             </div>
         </a>
     </div>
-    <a class="smoothscroll" style="cursor: pointer;">
-        <div class="scroll-down"></div>
+    <a  href="#about" class="smoothscroll" style="cursor: pointer;">
+        <div class="scroll-down" > </div>
     </a>
 </header>
 
@@ -408,7 +408,7 @@
 
     $(window).scroll(function () {
 
-        if ($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > 720) {
             $('.main_nav').addClass('sticky');
         } else {
             $('.main_nav').removeClass('sticky');

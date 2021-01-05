@@ -43,7 +43,8 @@ html {
         display: block;
         position: relative;
         /*color: #808080;*/ /*Menu color*/
-        color: #007066;
+        /*color: #490000;*/ /*Text color*/
+        color: #ff652f;
         text-decoration: none;
         white-space: nowrap;
         text-align: right;
@@ -55,30 +56,37 @@ html {
             width: 16px;
             height: 16px;
             /*border-radius: 50%;*/
-            border: 2px solid #007066; /*Menu color*/
+            /*border: 2px solid #007066;*/ /*Menu color*/
             -webkit-transition: 0.2s;
             transition: 0.2s;
         }
 
     .side-menu span {
-        font-size: 1.1vw;
+        /*        background-color: #808080;
+*/ font-size: 1.1vw;
         display: block;
         position: absolute;
-        right: 32px;
+        right: 12px;
         -webkit-transition: 0.2s;
         transition: 0.2s;
+        /*overflow:hidden;
+        filter: blur(0.5px);*/
+        /*
+        border-radius: 25px;
+        border: 2px solid #000000;
+        padding: 2px;*/
         /*        visibility: hidden;
 */ /*opacity: 0;*/
-        -webkit-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        /*-webkit-transform: translate3d(-500, 0, 0);
+        -ms-transform: translate3d(-500, 0, 0);
+        -o-transform: translate3d(-500, 0, 0);
+        transform: translate3d(-500, 0, 0);*/
     }
 
     .side-menu .active a:after {
         /*background: #00ff21;*/ /*Menu color*/
-        background: linear-gradient(135deg, #0026ff 0%, #4cff00 100%);
-    }
+/*        background: linear-gradient(135deg, #0026ff 0%, #4cff00 100%);
+*/    }
 
     .side-menu .active span {
         visibility: visible;
@@ -87,15 +95,16 @@ html {
         -ms-transform: translate3d(-30px, 0, 0);
         -o-transform: translate3d(-30px, 0, 0);
         transform: translate3d(-30px, 0, 0);
-        color: #41cc00;
+        color: #14a76c;
+        text-decoration: underline;
     }
 
-a:hover { /*Change menu text color when mouse over*/
-    color: #ff6a00;
+a:hover span { /*Change menu text color when mouse over*/
+    color: #ffe400;
 }
 
 .active:hover span { /*Change menu text color what is activated when mouse over*/
-    color: #00dc7e;
+    color: #b6ff00;
 }
 
 
