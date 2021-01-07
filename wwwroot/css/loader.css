@@ -4,13 +4,13 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-/*	background-color: transparent;
-*/		background-color: white;
- display: flex;
+	/*	background-color: transparent;
+*/ background-color: #171717;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	z-index:9999;
+	z-index: 9999;
 }
 
 svg {

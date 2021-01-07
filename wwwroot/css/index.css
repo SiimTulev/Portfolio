@@ -4,6 +4,8 @@
 
 
 
+
+
 /* Base Styles
         ********************************************************************* */
 html {
@@ -217,7 +219,7 @@ h6 {
     font-weight: 300;
     /*    color: #747474;
 */ /*color: #fff;*/
-     color: #ffffff;
+    color: #ffffff;
 }
 
 h1 {
@@ -287,7 +289,7 @@ p {
     margin-top: 0;
     /*    color: #747474;
 */ /*color: #fff;*/
-     color: #8e8e8e;
+    color: #8e8e8e;
 }
 /* Links
         ********************************************************************* */
@@ -318,8 +320,8 @@ header {
     /*    background: linear-gradient(135deg, #747474 0%, #272727 100%);
 */
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(23,23,23,1) 100%);
-/*    background: linear-gradient(180deg, rgba(255,255,255,0.4962359943977591) 0%, rgba(39,39,39,1) 100%);
-*/    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+    /*    background: linear-gradient(180deg, rgba(255,255,255,0.4962359943977591) 0%, rgba(39,39,39,1) 100%);
+*/ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
 }
 
 .name {
@@ -328,27 +330,26 @@ header {
     background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  
 }
 
 /*.firstName {*/
-    /*    color: #FFE400;
+/*    color: #FFE400;
 */ /*color: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,23,23,1) 100%);*/
-    /*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+/*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .lastName {*/
-    /*    color: #FFE400;
+/*    color: #FFE400;
 */ /*color: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(23,23,23,1) 100%);*/
-    /*background: -webkit-linear-gradient( rgba(23,23,23,1), rgba(255,255,255,1));
+/*background: -webkit-linear-gradient( rgba(23,23,23,1), rgba(255,255,255,1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }*/
 
 .workName {
-/*    color: #14A76C; 
-*/    color:#FF652F;
+    /*    color: #14A76C; 
+*/ color: #FF652F;
 }
 
 .title {
@@ -647,8 +648,9 @@ nav ul active:hover span { /*Change menu text color what is activated when mouse
 /* Team Section
         ********************************************************************* */
 #team {
-/*    padding: 50px 0 100px 0;
-*/}
+    /*    padding: 50px 0 100px 0;
+*/
+}
 
     #team .icon {
         font-size: 26px;
@@ -834,8 +836,8 @@ input[type="submit"] {
     border: 0;
     cursor: pointer;
     box-sizing: border-box;
-/*    ////////////
-*/     align-items: center;
+    /*    ////////////
+*/ align-items: center;
     background-color: #ffffff;
     border-color: #000000;
     border-style: solid;
@@ -868,16 +870,15 @@ footer {
     /*    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
 */
     background: linear-gradient(0deg, rgba(255,255,255,0.1162359943977591) 0%, rgba(39,39,39,1) 100%);
-
-/*    background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(255,255,255,1) 100%);
-*/    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+    /*    background: linear-gradient(180deg, rgba(39,39,39,1) 0%, rgba(255,255,255,1) 100%);
+*/ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
     box-sizing: border-box;
 }
 
     footer p {
         /*        color: #ffffff;
 */
-        color: #8e8e8e ;
+        color: #8e8e8e;
         margin: 20px 0 0 0;
     }
 
