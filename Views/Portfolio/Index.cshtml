@@ -14,6 +14,8 @@
 @*@(await Html.RenderComponentAsync<WebGame.Components.Portfolio>(RenderMode.ServerPrerendered))*@
 
 
+
+
 <head>
     <link rel="stylesheet" href="~/css/rightSidebar.css">
     <link rel="stylesheet" href="~/css/loader.css">
@@ -40,7 +42,7 @@
     <div class="container my-container title" id="home">
         <div><span class="typcn typcn-heart-outline icon heading"></span></div>
         @*<div class="smallsep heading"></div>*@
-    <h1 class="heading"><span class="firstName">Siim</span>  <span class="lastName">Tulev</span> </h1>
+    <h1 class="heading"><span class="name">Siim Tulev</span> </h1>
         <h2 class="heading"><span class="workName">Web Developer & Designer</span></h2>
         <a class="smoothscroll"
 
@@ -211,7 +213,9 @@
             <div class="row">
                 <label for="exampleMessage">Message</label>
                 <textarea class="u-full-width"></textarea>
-                <input class="button-primary" type="submit" value="Submit">
+                @*<input class="button-primary" type="submit" value="Submit">*@
+                <input class="contactButton" type="submit" value="Submit">
+
             </div>
         </form>
     </div>
@@ -239,7 +243,7 @@
     <div class="toolbar">
         <div id="main-header" class="side-menu">
             <nav>
-                <li id="home1" class="Bhome"><a href="#home"><span>Home</span></a></li>
+                <li id="home1" class="Bhome"><a  href="#home"><span>Home</span></a></li>
                 <li id="about1" class="Babout"><a href="#about"><span>About</span></a></li>
                 <li id="team1" class="Bteam">  <a href="#team"> <span>Team</span></a></li>
                 <li id="services1" class="Bservices"> <a href="#services"><span>Services</span></a></li>
@@ -432,29 +436,7 @@
     });
 
 
-    /*----------------------------------------------------*/
-    /* Smooth Scrolling
-    ------------------------------------------------------ */
-
-    jQuery(document).ready(function ($) {
-
-        $('.smoothscroll').on('click', function (e) {
-            e.preventDefault();
-
-            var target = this.hash,
-                $target = $(target);
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 800, 'swing', function () {
-                window.location.hash = target;
-            });
-        });
-
-    });
-
-
-    TweenMax.staggerFrom(".heading", 0.8, { opacity: 0, y: 20, delay: 0.2 }, 0.4);
+  
 </script>
 
 

@@ -44,10 +44,14 @@ html {
         position: relative;
         /*color: #808080;*/ /*Menu color*/
         /*color: #490000;*/ /*Text color*/
-        color: #ff652f;
+        /*        color: #ff652f;
+*/
+        color: #b2b2b2;
         text-decoration: none;
         white-space: nowrap;
         text-align: right;
+        /*        filter: drop-shadow(0.05em 0.05em black);
+*/
     }
 
         .side-menu a:after {
@@ -95,16 +99,20 @@ html {
         -ms-transform: translate3d(-30px, 0, 0);
         -o-transform: translate3d(-30px, 0, 0);
         transform: translate3d(-30px, 0, 0);
-        color: #14a76c;
+        /*        color: #14a76c;
+*/
+        color: #ffffff;
         text-decoration: underline;
     }
 
 a:hover span { /*Change menu text color when mouse over*/
-    color: #ffe400;
+    /*    color: #ffe400;
+*/
+    color: #ffffff;
 }
 
 .active:hover span { /*Change menu text color what is activated when mouse over*/
-    color: #b6ff00;
+    color: #ffffff;
 }
 
 
