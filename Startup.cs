@@ -67,7 +67,7 @@ namespace WebGame
            {
                endpoints.MapControllerRoute(
                    name: "default",
-                   pattern: "{controller=Portfolio}/{action=Index}/{id?}");
+                   pattern: "{controller=Portfolio}/{action=learningGreen}/{id?}");
                endpoints.MapRazorPages();
                endpoints.MapBlazorHub();
 

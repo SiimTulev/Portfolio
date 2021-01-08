@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {},
   "dependencies": {
+    "gsap": "^3.5.1",
     "smooth-scrollbar": "^8.5.3"
   }
 }

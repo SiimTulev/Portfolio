@@ -13,7 +13,7 @@ namespace WebGame.Controllers
             return View();
         }
 
-        public IActionResult Testt()
+        public IActionResult learningGreen()
         {
             return View();
         }
