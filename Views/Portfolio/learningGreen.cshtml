@@ -40,9 +40,13 @@ $(window).load(function () {
     $(".loader-wrapper").fadeOut("slow");
 
     //gsap.to(".box", { rotation: 27, x: 100, duration: 1 });
-    TweenMax.to('.panel', 1.5, { scaleY: 1, height: '100vh' });
+    TweenMax.to('.panel', 1.5, { scaleY: 1, height: '100vh', ease: Circ.easeOut });
 
-    gsap.to('#light', { duration: 2, opacity: 1, y: 0, delay: 1, ease: "elastic.out(1, 0.3)" });
+    gsap.to('#light', { duration: 5, opacity: 1, y: 0, delay: 1, ease: "elastic.out(1, 1)" });
+
+    gsap.to('p', { duration: 2, opacity: 1, y: 20, delay: 1.4 });
+    gsap.to('.box', { duration: 3, opacity: 1, scale: 1, ease: "elastic.out(1, 1)"  })
+
         // TODO TUTORIAL : https://www.youtube.com/watch?v=rJRrUHds7fc&ab_channel=GreenSockLearning
         // So I can use custom EASE
 
