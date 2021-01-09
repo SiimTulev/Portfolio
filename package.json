@@ -5,6 +5,7 @@
   "devDependencies": {},
   "dependencies": {
     "gsap": "^3.5.1",
+    "gsap-bonus": "file:gsap-bonus.tgz",
     "smooth-scrollbar": "^8.5.3"
   }
 }
