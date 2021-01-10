@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Pomelo.EntityFrameworkCore.MySql;
-
+using Microsoft.AspNetCore.SpaServices.Extensions;
 namespace WebGame
 {
     public class Startup
@@ -39,6 +39,9 @@ namespace WebGame
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddSpaStaticFiles(config => config.RootPath = "ClientApp/Build");
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +57,7 @@ namespace WebGame
                 app.UseStatusCodePagesWithRedirects("/Error/{0}");
                 app.UseHsts();
             }
+            app.UseSpaStaticFiles();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -67,7 +71,7 @@ namespace WebGame
            {
                endpoints.MapControllerRoute(
                    name: "default",
-                   pattern: "{controller=Portfolio}/{action=learningGreen}/{id?}");
+                   pattern: "{controller=Portfolio}/{action=learningGreen2}/{id?}");
                endpoints.MapRazorPages();
                endpoints.MapBlazorHub();
 
