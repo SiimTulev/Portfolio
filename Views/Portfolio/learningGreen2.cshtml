@@ -6,23 +6,53 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js"></script>
-    <link rel="stylesheet" href="~/css/test.css" />
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js" defer></script>
+    <link rel="stylesheet" href="~/css/green2.css" />
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 15vh;
+            background-color: red;
+        }
+
+        .links {
+            height: 100%; /*put links to center*/
+            align-items: center; /*put links to center*/
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            background-color: green;
+            width: 15vw;
+        }
+
+        .button {
+            align-self: center;
+        }
+
+        .footer {
+            height: 15vh;
+            background-color: blue;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div class="ab">
-        <a>AB</a>
-        <div class="ab ba">
-            <a>AB BA</a>
-        </div>
-
-    </div>
-    <div class="ba">
-        <a>BA</a>
-    </div>
-
     <div class="header">
         <div class="links">
             <div class="link">Link 1</div>
@@ -31,9 +61,16 @@
         </div>
     </div>
     <div class="content">
-        <div class="sidebat left"></div>
+        <div class="sidebar left"></div>
         <button class="button">Reverse!</button>
-        <div class="sidebat right"></div>
+        <div class="sidebar right"></div>
 
     </div>
+    <div class="footer"></div>
 </body>
+
+<script>
+
+
+
+</script>

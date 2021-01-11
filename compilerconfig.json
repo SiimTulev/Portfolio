@@ -1,6 +1,10 @@
 ﻿[
   {
     "outputFile": "wwwroot/css/test.css",
-    "inputFile": "wwwroot/css/test.scss"
+    "inputFile": "wwwroot/css/SASS/test.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/green2.css",
+    "inputFile": "wwwroot/css/SASS/green2.scss"
   }
 ]

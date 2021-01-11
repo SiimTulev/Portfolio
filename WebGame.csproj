@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="compilerconfig.json" />
-    <_ContentIncludedByDefault Remove="wwwroot\css\test.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\SASS\green2.css" />
   </ItemGroup>
 
 
