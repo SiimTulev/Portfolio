@@ -37,7 +37,8 @@ function getMostVisibleElement(selector) {
 var x = "";
 var mostVisibleSaveLast = null;
 
-$(window).load(function () { // IF using .ready then sometimes it shows many enabled views same time at side menu
+//$(window).load(function () { // VERSION 2.1.1
+    $(window).on('load',function () { // IF using .ready then sometimes it shows many enabled views same time at side menu
 
     var mostVisible = getMostVisibleElement('.my-container');
 
