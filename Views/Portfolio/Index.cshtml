@@ -279,7 +279,7 @@
     //        $(".toolbar").load("getMeddelanden.php");
     //}, 5000);
 
-    $(window).load(function () {
+    $(window).on('load', function () {
         @* Loading effect *@
         $(".loader-wrapper").fadeOut("slow");
     });
@@ -344,7 +344,7 @@
     var x = "";
     var mostVisibleSaveLast = null;
 
-    $(window).load(function () { // IF using .ready then sometimes it shows many enabled views same time at side menu
+    $(window).on('load', function () { // IF using .ready then sometimes it shows many enabled views same time at side menu
 
         var mostVisible = getMostVisibleElement('.my-container');
 
