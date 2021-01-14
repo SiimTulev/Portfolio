@@ -116,6 +116,16 @@ a:hover span { /*Change menu text color when mouse over*/
 }
 
 
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.toolbar li {
+    font-size: 2em;
+}
+
 
 
 /*section {

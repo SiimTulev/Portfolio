@@ -25,5 +25,9 @@ namespace WebGame.Controllers
         {
             return View();
         }
+        public IActionResult learningGreen4()
+        {
+            return View();
+        }
     }
 }

@@ -6,5 +6,9 @@
   {
     "outputFile": "wwwroot/css/green2.css",
     "inputFile": "wwwroot/css/SASS/green2.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/green4.css",
+    "inputFile": "wwwroot/css/SASS/green4.scss"
   }
 ]
