@@ -1,5 +1,136 @@
 ﻿body {
-  background-color: black; }
+  background-color: #121212; }
+
+.Nametitle {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding: 2rem;
+    max-width: 960px;
+    text-align: center;
+}
+
+.Nametitle .smallsep {
+    background: #fff;
+    height: 2px;
+    width: 70px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Nametitle h1 {
+    font-size: 80px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 0.85;
+    margin-bottom: 28px;
+    margin: 0;
+    padding: 0;
+    /*        color: #ffffff;
+*/
+    color: #747474;
+}
+
+.Nametitle h2 {
+    /*        color: #ffffff;
+*/
+    color: #747474;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 50px;
+}
+
+@media only screen and (max-height: 700px) {
+    .Nametitle h1 {
+        font-size: 80px;
+    } }
+
+.Nametitle p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 150%;
+}
+
+/* For devices larger than 400px */
+@media (max-width: 500px) {
+    .Namecontainer {
+        width: 90%;
+        padding: 0;
+    } }
+
+.Namecontainer {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.buttonsContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .buttonsContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+.Namecontainer:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+    .Namecontainer {
+        width: 85%;
+        padding: 0;
+    } }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+    .Namecontainer {
+        width: 85%;
+        padding: 0;
+    } }
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+    .Namecontainer {
+        width: 80%;
+    } }
+
+@media only screen and (max-width: 500px) {
+    .Nametitle h1 {
+        font-size: 65px;
+    } }
+
+.Nametitle .icon {
+    /*    color: #ffffff;
+*/
+    color: #747474;
+    font-size: 50px;
+}
 
 .panel {
   background: #070707; }
@@ -20,12 +151,15 @@ body {
   /*    background-color: #071c21;
 */ }
 
-h1 {
-  font-size: 5em;
+.EngForTom {
+  display: block;
   width: 25%;
-  /*    color: red;
-*/
-  line-height: 1em; }
+  line-height: 0.2vh;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 900;
+  font-size: 5.25em;
+  margin: 0 0 1em; }
 
 button {
   /*    background: #2d6e7e;
@@ -80,32 +214,6 @@ button {
   /*opacity:0;
 				transform:scale(0);*/ }
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  text-align: center; }
-  @media (min-width: 600px) {
-    .container {
-      flex-direction: row;
-      justify-content: space-between; } }
-
-h1 {
-  color: white;
-  font-size: 1.25em;
-  font-weight: 900;
-  margin: 0 0 2em; }
-  @media (min-width: 450px) {
-    h1 {
-      font-size: 1.75em; } }
-  @media (min-width: 760px) {
-    h1 {
-      font-size: 3.25em; } }
-  @media (min-width: 900px) {
-    h1 {
-      font-size: 5.25em;
-      margin: 0 0 1em; } }
 
 p {
   color: white;
@@ -264,3 +372,10 @@ p {
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388; }
+
+
+
+
+
+
+

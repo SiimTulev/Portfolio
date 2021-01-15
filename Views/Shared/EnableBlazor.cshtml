@@ -1,20 +1,35 @@
 ﻿
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+
     <style>
+
+
         /*DONT PUT IT IN CSS FILE BECAUSE IT WILL NOT LOAD FASTER THEN*/
-        .loader-wrapper {
+        .loadingBackground {
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            /*	background-color: transparent;
-            */ background-color: #171717;
+            background-color: #121212;
+            z-index: -100000;
+        }
+
+        .loadingEffectWrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
             position: fixed;
-            z-index: 9999;
+            z-index: -100000;
         }
 
         .SVG_BootstrapDontTouch {
@@ -77,7 +92,12 @@
         }
     </style>
 
-    <div class="loader-wrapper">
+
+    <div class="loadingBackground">
+
+    </div>
+
+    <div class="loadingEffectWrap">
         <svg class="SVG_BootstrapDontTouch">
             <g>
                 <path d="M 50,100 A 1,1 0 0 1 50,0" />
@@ -88,7 +108,7 @@
             <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#747474;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
                 </linearGradient>
             </defs>
         </svg>
@@ -123,6 +143,12 @@
 @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
 
 
+
+<script>
+
+    gsap.to('.loadingBackground', 0, { opacity: 0, autoAlpha: 0 });
+    gsap.to('.SVG_BootstrapDontTouch', 3, { opacity: 0, autoAlpha: 0 });
+</script>
 
 
 

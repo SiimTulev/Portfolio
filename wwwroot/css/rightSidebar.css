@@ -102,13 +102,14 @@ html {
         /*        color: #14a76c;
 */
         color: #ffffff;
-/*        text-decoration: underline;
+        /*        text-decoration: underline;
 */
         outline: 1px solid;
-/*        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-*/        outline-color: rgba(255, 255, 255, 0);
+        /*        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+*/ outline-color: rgba(255, 255, 255, 0);
         outline-offset: 15px;
-        text-shadow: 1px 1px 2px #1aff00;
+        text-shadow: 1px 1px 2px rgba(0, 255, 0, 100);
+        ;
     }
 
 a:hover span { /*Change menu text color when mouse over*/
