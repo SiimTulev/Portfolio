@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //gsap.to('.box', { duration: 3, delay: 0.5, opacity: 1, scale: 1, ease: "elastic.out(1, 1)" })
             //gsap.from('.side-menu', { duration: 3.5,  x: '100vw', ease: "circ.out" })
             //gsap.from('.EngForTom', { duration: 1, x: '-100vw', stagger: 0.5 })
+
+            //gsap.to('.whiteBox', 1.5, { opacity:1, scaleY: 1, delay: 0.5, height: '50vh', ease: Circ.easeOut });
         });
     };
 });
