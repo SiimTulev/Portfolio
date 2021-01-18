@@ -1,13 +1,15 @@
 ﻿html {
     font-size: 16px;
+    background-color: #121212;
+    font-family: Consolas;
 }
 
 body {
-    background-color: #121212;
+   /* background-color: #121212;
     font-family: Consolas;
     margin: 0 auto;
     max-width: 1040px;
-    width: 100%;
+    width: 100%;*/
     /*/////////////*/
     /* background-color: #121212;
     font-family: Consolas;
@@ -17,12 +19,21 @@ body {
     margin: 0 auto;*/
 }
 
+.content__wrapper {
+    background-color: red;
+    max-width: 1200px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
 main {
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0px auto;
+/*    background-color: rgba(255, 255, 255, 0.2);
+*/    /*margin: 0px auto;
     width: 100%;
     max-width: 2560px;
-    min-height: 100vh;
+    min-height: 100vh;*/
 }
 
 .my-container {
@@ -39,27 +50,21 @@ main {
 .whiteBox {
     background: white;
     opacity: 1;
-    position: relative;
-    max-width: 500px;
+    max-width: 50rem;
     margin: 0 auto;
-    padding-top: 10%;
     top: 10%;
-    padding: 0px 25px;
+    padding: 0rem 1rem;
 }
 
-.headerText {
+h1, h2, h3, h4, h5 {
+    color: #747474;
 }
 
 .Nametitle {
     max-width: 2560px;
 }
 
-    .Nametitle h2 {
-        color: #747474;
-        font-size: 1.2rem;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
+  
 
 
 @media only screen and (max-width: 750px) {
@@ -121,9 +126,8 @@ button {
     width: 25%;
     line-height: 0.2vh;
     color: white;
-    font-size: 1.25em;
     font-weight: 900;
-    font-size: 5.25em;
+    font-size: 5.25rem;
     margin: 0 0 1em;
 }
 
