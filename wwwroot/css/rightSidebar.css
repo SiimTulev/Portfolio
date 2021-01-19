@@ -34,7 +34,7 @@ html {
 
     .side-menu li {
         padding: 1vh 0;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 13.5px;
     }
 
@@ -67,7 +67,7 @@ html {
     .side-menu span {
         /*        background-color: #808080;
 */
-        font-size: 1.1vw;
+        font-size: 1rem;
         display: block;
         position: absolute;
         right: 12px;
@@ -129,9 +129,6 @@ li {
     align-items: center;
 }
 
-.toolbar li {
-    font-size: 2em;
-}
 
 
 
@@ -160,11 +157,7 @@ li {
         margin: auto;
     }*/
 
-h1, h2 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 3em;
-}
+
 
 /*#home {
     background: #C2185B;
