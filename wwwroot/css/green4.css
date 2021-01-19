@@ -9,6 +9,7 @@
         /*        font-size: calc(3vw + 3vh + 1.5vmin) !important;
 */
         font-size: calc(1.1vw + 1.1vh + 0.55vmin) !important;
+
     }
 
   /*  .realName, .workName {
@@ -18,8 +19,11 @@
 }
 @media only screen and (max-width: 1000px) {
     html {
-        background-color: green;
+        /*background-color: green;*/
         z-index: 500000;
+    }
+    .whiteBox {
+        margin: 30vh auto 0 0 !important;
     }
 }
 
@@ -41,8 +45,8 @@
     }
 
     .content__wrapper {
-        background-color: red;
-        max-width: 1200px;
+/*        background-color: red;
+*/        max-width: 1600px;
         width: 90%;
         margin: 0 auto;
         position: relative;
@@ -68,12 +72,12 @@
     }
 
     .whiteBox {
-        background: rgba(255, 255, 255, 0.5);
-        opacity: 1;
+/*        background: rgba(255, 255, 255, 0.5);
+*/        opacity: 1;
         max-width: 100%;
         max-height: 50rem;
-        margin: 20vh auto 0 0;
-        padding: 1rem 1rem;
+        margin: 5vh auto 0 0;
+        padding: 0rem;
     }
 
     h1, h2, h3, h4, h5, a {
@@ -88,20 +92,37 @@
     vertical-align: text-bottom;
     font-size: 1.5rem;
     font-weight: 400;
-    color: aqua
+    color: aqua;
 }
 
 .realName {
                font-size: 5rem;
+               font-weight:400;
 }
 
 .workName {
-        font-size: 5rem;
+        font-size: 4rem;
 }
 
-    @media only screen and (max-width: 750px) {
-        /*    @media (max-width: 500px) { */
-        contents {
+.headerAnim {
+    display: inline-block;
+    opacity: 1;
+}
+
+.headerAnimComma {
+    display: inline-block;
+    opacity: 1;
+}
+
+.headerAnimExclamation {
+    display: inline-block;
+    opacity: 1;
+    position: absolute;
+}
+
+@media only screen and (max-width: 750px) {
+    /*    @media (max-width: 500px) { */
+    contents {
             padding: 9em;
         }
     }
