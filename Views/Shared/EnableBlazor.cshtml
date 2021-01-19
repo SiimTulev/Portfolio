@@ -15,7 +15,7 @@
             top: 0;
             left: 0;
             background-color: #121212;
-            z-index: -100000;
+            z-index: 100000;
         }
 
         .loadingEffectWrap {
@@ -29,7 +29,7 @@
             justify-content: center;
             align-items: center;
             position: fixed;
-            z-index: -100000;
+            z-index: 100001;
         }
 
         .SVG_BootstrapDontTouch {
@@ -93,11 +93,11 @@
     </style>
 
 
-    <div class="loadingBackground">
+    <div id="loadingBackground" class="loadingBackground">
 
     </div>
 
-    <div class="loadingEffectWrap">
+    <div id="loadingEffectWrap" class="loadingEffectWrap">
         <svg class="SVG_BootstrapDontTouch">
             <g>
                 <path d="M 50,100 A 1,1 0 0 1 50,0" />
@@ -145,9 +145,19 @@
 
 
 <script>
+    //reusable function
+    function removeElement(element) {
+        if (typeof (element) === "string") {
+            element = document.querySelector(element);
+        }
+        return function () {
+            element.parentNode.removeChild(element);
+        };
+    }
 
-    gsap.to('.loadingBackground', 0, { opacity: 0, autoAlpha: 0 });
-    gsap.to('.SVG_BootstrapDontTouch', 3, { opacity: 0, autoAlpha: 0 });
+    gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
+    gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
+    //gsap.kill(myObject);
 </script>
 
 

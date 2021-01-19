@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         window.requestAnimationFrame(function () {
 
             //$(".loader-wrapper").fadeOut("slow");
-           
+
 
             //gsap.to('.panel', 1.5, { scaleY: 1, delay: 0.5, height: '100vh', ease: Circ.easeOut });
             //gsap.to('#light', { duration: 5, opacity: 1, y: 0, delay: 0.5, ease: "elastic.out(1, 1)" });
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //gsap.to('.box', { duration: 3, delay: 0.5, opacity: 1, scale: 1, ease: "elastic.out(1, 1)" })
             //gsap.from('.EngForTom', { duration: 1, x: '-100vw', stagger: 0.5 })
             gsap.from('.side-menu', { duration: 3.5, delay: 3, x: '100vw', ease: "circ.out" })
-            gsap.from('.headerAnimComma', { duration: 3, delay: 4, opacity: 0, x: '-1vh' });
+            gsap.from('.headerAnimComma', { duration: 3, delay: 4, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
             //gsap.fromTo(".headerAnimExclamation", {delay: 3, opacity: 1, y: '10vh' }, { duration: 2, delay: 3, opacity: 0, y: '-10vh' });
 
@@ -50,12 +50,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             tl = new TimelineMax();
 
-            tl.from("#exclamation", 3, { delay: 1, opacity: 0, y: '10vh'})
-                .to("#exclamation", 1, {  opacity: 0, y: '-10vh'})
+            tl.from("#exclamation", 3, { delay: 1, opacity: 0, y: '10vh', ease: "elastic.out(1, 1)" })
+                .to("#exclamation", 0.2, { color: "red", })
+                .to("#exclamation", 0.5, {  opacity: 0, y: '-10vh' })
                 .call(removeElement("#exclamation"))
-               
 
-            gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1 });
+
+            gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1, ease: "elastic.out(1, 1)" });
             //gsap.to('.whiteBox', { duration: 3, opacity: 1, scaleY: 1, delay: 3, padding: "1rem", ease: Circ.easeOut  });
         });
     };
