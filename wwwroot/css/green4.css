@@ -11,6 +11,10 @@
         font-size: calc(1.1vw + 1.1vh + 0.55vmin) !important;
     }
 
+    .btn {
+        padding: calc(1.2vw + 1.2vh + 0.6vmin);
+    }
+
     /*  .realName, .workName {
         font-size: calc(3.6vw +3.6vh + 1.8vmin) !important;
         background-color:blueviolet;
@@ -68,7 +72,8 @@ main {
 }
 
 .home {
-    height: 100%;
+    height: auto;
+    min-height: 90vh;
     width: 100%;
 }
 
@@ -282,8 +287,8 @@ p {
     font-size: 16px;
     font-weight: 400;
     line-height: 45px;
-/*    margin: 0 0 2em;
-*/    max-width: 160px;
+    /*    margin: 0 0 2em;
+*/ max-width: 160px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
@@ -291,15 +296,15 @@ p {
     z-index: 100;
 }
 
-/*@media (min-width: 600px) {
+    /*@media (min-width: 600px) {
     .btn {
         margin: 0 1em 2em;
     }
 }*/
 
-.btn:hover {
-    text-decoration: none;
-}
+    .btn:hover {
+        text-decoration: none;
+    }
 
 .btn-1 {
     background: #f70000;
