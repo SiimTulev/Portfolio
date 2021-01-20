@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 .call(removeElement("#exclamation"))
 
 
-            gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1, ease: "elastic.out(1, 1)" });
+            //gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1, ease: "elastic.out(1, 1)" });
+
             //gsap.to('.whiteBox', { duration: 3, opacity: 1, scaleY: 1, delay: 3, padding: "1rem", ease: Circ.easeOut  });
         });
     };
