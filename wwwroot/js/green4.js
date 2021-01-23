@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             gsap.from('.headerAnimComma', { duration: 3, delay: 4, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
 
-            gsap.from('.waves', { duration: 10, opacity:0, delay: 2, y: '100vh', ease: "circ.out" })
+            gsap.from('.waves', { duration: 10, opacity: 0, delay: 2, y: '100vh', ease: "circ.out" })
 
             //gsap.fromTo(".headerAnimExclamation", {delay: 3, opacity: 1, y: '10vh' }, { duration: 2, delay: 3, opacity: 0, y: '-10vh' });
 
@@ -55,12 +55,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             tl.from("#exclamation", 3, { delay: 1, opacity: 0, y: '10vh', ease: "elastic.out(1, 1)" })
                 .to("#exclamation", 0.2, { color: "red", })
-                .to("#exclamation", 0.5, {  opacity: 0, y: '-10vh' })
+                .to("#exclamation", 0.5, { opacity: 0, y: '-10vh' })
                 .call(removeElement("#exclamation"))
 
 
             gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1, ease: "elastic.out(1, 1)" });
 
+
+            gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
+            gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
             //gsap.to('.whiteBox', { duration: 3, opacity: 1, scaleY: 1, delay: 3, padding: "1rem", ease: Circ.easeOut  });
         });
     };

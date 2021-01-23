@@ -144,7 +144,7 @@
 
 
 
-<script>
+<!--<script>
     //reusable function
     function removeElement(element) {
         if (typeof (element) === "string") {
@@ -153,13 +153,9 @@
         return function () {
             element.parentNode.removeChild(element);
         };
-    }
+    }-->
+@*gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
+    gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });*@
 
-    gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
-    gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
-    //gsap.kill(myObject);
-</script>
-
-
-
-
+<!--//gsap.kill(myObject);
+</script>-->
