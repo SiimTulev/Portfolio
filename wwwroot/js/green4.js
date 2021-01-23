@@ -1,18 +1,18 @@
-﻿gsap.registerPlugin(ScrollTrigger);
+﻿//gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".first", {
-    scrollTrigger: {
-        trigger: ".first",
-        start: "20px 80%",
-        end: "botto",
-        scrub: true,
-        //markers: true
-    },
-    x: 800,
-    rotation: 360,
-    ease: "none",
-    duration: 3
-});
+//gsap.to(".first", {
+//    scrollTrigger: {
+//        trigger: ".first",
+//        start: "20px 80%",
+//        end: "botto",
+//        scrub: true,
+//        //markers: true
+//    },
+//    x: 800,
+//    rotation: 360,
+//    ease: "none",
+//    duration: 3
+//});
 
 /////////
 // wait until DOM is ready
@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //gsap.from('.EngForTom', { duration: 1, x: '-100vw', stagger: 0.5 })
             gsap.from('.side-menu', { duration: 3.5, delay: 3, x: '100vw', ease: "circ.out" })
             gsap.from('.headerAnimComma', { duration: 3, delay: 4, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
+
+
+            gsap.from('.waves', { duration: 10, opacity:0, delay: 2, y: '100vh', ease: "circ.out" })
 
             //gsap.fromTo(".headerAnimExclamation", {delay: 3, opacity: 1, y: '10vh' }, { duration: 2, delay: 3, opacity: 0, y: '-10vh' });
 
