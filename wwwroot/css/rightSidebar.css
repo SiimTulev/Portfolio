@@ -46,7 +46,7 @@ html {
         /*color: #490000;*/ /*Text color*/
         /*        color: #ff652f;
 */
-        color: #b2b2b2;
+        color: #ccd6f6;
         text-decoration: none;
         white-space: nowrap;
         text-align: right;
@@ -90,8 +90,9 @@ html {
 
     .side-menu .active a:after {
         /*background: #00ff21;*/ /*Menu color*/
-/*        background: linear-gradient(135deg, #0026ff 0%, #4cff00 100%);
-*/    }
+        /*        background: linear-gradient(135deg, #0026ff 0%, #4cff00 100%);
+*/
+    }
 
     .side-menu .active span {
         visibility: visible;
@@ -109,8 +110,8 @@ html {
         /*        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
 */ outline-color: rgba(255, 255, 255, 0);
         outline-offset: 15px;
-        text-shadow: 1px 1px 2px rgba(0, 255, 0, 100);
-        ;
+        text-shadow: 1px 1px 2px rgba(0, 255, 255, 100);
+        
     }
 
 a:hover span { /*Change menu text color when mouse over*/
@@ -120,7 +121,8 @@ a:hover span { /*Change menu text color when mouse over*/
 }
 
 .active:hover span { /*Change menu text color what is activated when mouse over*/
-    color: #ffffff;
+/*    color: #ffffff;*/ 
+color: rgba(0, 255, 255, 100);
 }
 
 

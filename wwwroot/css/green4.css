@@ -33,6 +33,27 @@
     .side-menu {
         display: none
     }
+    .selection {
+        font-size: calc(3.2vw + 3.2vh + 1.6vmin) !important;
+        padding-top: calc(1vw + 1vh + 0.5vmin) !important;
+        z-index: 3;
+    }
+
+    #menu {
+        position: fixed;
+        width: 50vw;
+        height: 100vh;
+        box-shadow: 0 0 10px #85888C;
+        margin: -50px 0 0 -50px;
+        padding: 50px;
+        background-color: #F5F6FA;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(120vw, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        left: 50vw;
+        height: 100vh;
+    }
 
 
 
@@ -60,6 +81,12 @@
     #menuToggle {
         display: none !important;
     }
+
+    .foggy {
+        filter: blur(0px) !important;
+    }
+
+
 }
 
 @media only screen and (max-width: 600px) and (orientation:landscape) {
@@ -73,7 +100,9 @@
     html {
         z-index: 500000;
     }
-    
+
+  
+ 
 }
 
 @media only screen and (max-width: 768px) {
@@ -135,6 +164,7 @@ main {
     height: auto;
     /*        min-height: 90vh;  REMOVE IF PAGE IS LONGER*/
     width: 100%;
+    display:block;
 }
 
 .whiteBox {
@@ -161,6 +191,7 @@ h1, h2, h3, h4, h5, a {
     font-size: 1.5rem;
     font-weight: 400;
     color: aqua;
+    display:block;
 }
 
 .realName {
@@ -502,7 +533,7 @@ p {
 }
 
     .btn-5:hover {
-        border: 1px solid;
+/*        border: 1px solid;*/
         box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
         outline-color: rgba(255, 255, 255, 0);
         outline-offset: 15px;
