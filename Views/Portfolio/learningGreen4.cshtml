@@ -219,15 +219,15 @@
     <script>
         $('#phoneMenu').change(function () {
             if ($(this).is(":checked")) {
-                $('.content__wrapper').addClass("foggy");
+                gsap.to('.content__wrapper', 1, { filter: "blur(10px)" });
+
+                //$('.content__wrapper').addClass("foggy");
             } else {
-                $('.content__wrapper').removeClass("foggy");
+                gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
+
+                //$('.content__wrapper').removeClass("foggy");
             }
         });
-
-
-
-
     </script>
 
 
@@ -429,16 +429,6 @@
     #menuToggle input:checked ~ ul {
         transform: none;
     }
-
-    #menuToggle input:checked {
-        .content__wrapper
-
-    {
-        backdrop-filter: blur(5px);
-    }
-
-    }
-
 
     /**/
     .icon {

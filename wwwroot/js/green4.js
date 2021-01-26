@@ -68,3 +68,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     };
 });
+
+// If screen size goes bigger, remove blur and close phone side menu
+$(window).resize(function () {
+    if ($(window).width() > 1000) {
+        gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
+        document.getElementById('phoneMenu').checked = false;
+
+
+    }
+});
