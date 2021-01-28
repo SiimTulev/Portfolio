@@ -168,7 +168,7 @@
                         Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
                         xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
                         Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
-                    </div> 
+                    </div>
 
                 </div>
             </div>
@@ -177,57 +177,57 @@
 
 
     <style>
-        @@media only screen and (max-width: 1000px) {
-            .flexbox-item {
-                min-width: 600px;
-/*                font-size: calc(2vw + 1vh + 0.75vmin) !important;
-*/            }
-}
+                @@media only screen and (max-width: 1000px) {
+                    .flexbox-item {
+                        min-width: 600px;
+                        /*                font-size: calc(2vw + 1vh + 0.75vmin) !important;
+        */
+                    }
+                }
 
-        @@media only screen and (min-width: 1000px) {
-            .about {
-                max-width: 90%;
-            }
-        }
+                @@media only screen and (min-width: 1000px) {
+                    .about {
+                        max-width: 90%;
+                    }
+                }
 
 
-        .flexbox-container {
-            height: 800px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+                .flexbox-container {
+                    height: 800px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
 
-        .flexbox-item {
-            width: 200px;
-            margin: 10px;
-            border: 3px solid #fff;
-            background-color: aqua;
-            max-width: 80vw;
-            font-size: 1rem;
+                .flexbox-item {
+                    width: 200px;
+                    margin: 10px;
+                    border: 3px solid #fff;
+                    background-color: aqua;
+                    max-width: 80vw;
+                    font-size: 1rem;
+                    text-size-adjust: none;
+                    -webkit-text-size-adjust: none;
+                    -moz-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
+                }
 
-            text-size-adjust: none;
-            -webkit-text-size-adjust: none;
-            -moz-text-size-adjust: none;
-            -ms-text-size-adjust: none;
-        }
+                .flexbox-item-1 {
+                    min-height: 400px;
+                    flex-grow: 1;
+                }
 
-        .flexbox-item-1 {
-            min-height: 400px;
-            flex-grow: 1;
-        }
+                .flexbox-item-2 {
+                    min-height: 400px;
+                    flex-grow: 1;
+                }
 
-        .flexbox-item-2 {
-            min-height: 400px;
-            flex-grow: 1;
-        }
-
-        .flexbox-item-3 {
-            min-height: 400px;
-            flex-grow: 1;
-        }
+                .flexbox-item-3 {
+                    min-height: 400px;
+                    flex-grow: 1;
+                }
     </style>
 
 
@@ -331,11 +331,11 @@
         text-decoration: none;
         color: #1E1E23;
         opacity: 1;
-        font-size: 5rem;
+        font-size: 2rem;
         font-weight: 400;
         transition: 200ms;
-        padding-top: 10rem;
-        padding-right: 5rem;
+        padding-top: 5vh;
+        padding-right: 5vw;
     }
 
         .selection:hover {
@@ -383,14 +383,21 @@
 
 
     #menuToggle {
-        display: flex;
+        /*display: flex;
         flex-direction: column;
         position: fixed;
         top: 5rem;
         right: 5rem;
         z-index: 1;
         -webkit-user-select: none;
-        user-select: none;
+        user-select: none;*/
+        /* width: 5%; */
+        height: 5%;
+        position: fixed;
+        top: 5%;
+        border-radius: 4px;
+        z-index: 10;
+        right: 5%;
     }
 
         #menuToggle input {
@@ -406,10 +413,24 @@
         }
 
         #menuToggle span {
-            display: flex;
+            /*display: flex;
             width: 89px;
             height: 10px;
             margin-bottom: 20px;
+            position: relative;
+            background: #ffffff;
+            border-radius: 3px;
+            z-index: 10000000000000;
+            transform-origin: 5px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+            pointer-events: none;*/
+            /**/
+            display: flex;
+            width: 15vw;
+            max-width: 60px;
+            max-height: 5px;
+            height: 2vw;
+            margin-bottom: 3vh;
             position: relative;
             background: #ffffff;
             border-radius: 3px;
@@ -470,7 +491,7 @@
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         left: 50vw;*/
         /**/
-        position: fixed;
+        /*  position: fixed;
         width: 50vw;
         height: 100vh;
         box-shadow: 0 0 10px #85888C;
@@ -483,8 +504,27 @@
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         left: 50vw;
         height: 100vh;
-        padding-top: 20vh;
+        padding-top: 20vh;*/
+        /**/
+        box-shadow: 0 0 10px #85888C;
+        margin: -50px 0 0 -50px;
+        background-color: #F5F6FA;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(120vw, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        left: 50vw;
+        /**/
+        position: fixed;
+        top: 5vh;
+        right: 0;
+        height: 100%;
+        max-width: 515px;
+        width: 100%;
+        padding: 100px 40px 60px 40px;
+        overflow-y: auto;
     }
+
 
         #menu li {
             padding: 10px 0;
