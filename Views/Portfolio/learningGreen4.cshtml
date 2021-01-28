@@ -3,6 +3,8 @@
     Layout = "~/Views/Shared/EnableBlazor.cshtml";
 }
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169750055-1"></script>
 <script>
@@ -155,8 +157,18 @@
                         xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
                         Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
                     </div>
-                    <div class="flexbox-item flexbox-item-2">Flexbox Item 2</div>
-                    <div class="flexbox-item flexbox-item-3">Flexbox Item 3</div> 
+                    <div class="flexbox-item flexbox-item-2">
+                        Flexbox Item 1
+                        Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
+                        xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
+                        Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
+                    </div>
+                    <div class="flexbox-item flexbox-item-3">
+                        Flexbox Item 1
+                        Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
+                        xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
+                        Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
+                    </div> 
 
                 </div>
             </div>
@@ -165,12 +177,27 @@
 
 
     <style>
+        @@media only screen and (max-width: 1000px) {
+            .flexbox-item {
+                min-width: 600px;
+/*                font-size: calc(2vw + 1vh + 0.75vmin) !important;
+*/            }
+}
+
+        @@media only screen and (min-width: 1000px) {
+            .about {
+                max-width: 90%;
+            }
+        }
+
+
         .flexbox-container {
             height: 800px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .flexbox-item {
@@ -179,14 +206,17 @@
             border: 3px solid #fff;
             background-color: aqua;
             max-width: 80vw;
-            min-width: 500px;
-            font-size: 3rem;
+            font-size: 1rem;
+
+            text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
         }
 
         .flexbox-item-1 {
             min-height: 400px;
             flex-grow: 1;
-            font-size: 3rem;
         }
 
         .flexbox-item-2 {
