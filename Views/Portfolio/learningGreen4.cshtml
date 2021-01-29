@@ -394,22 +394,22 @@
         /* width: 5%; */
         height: 5%;
         position: fixed;
-        top: 5%;
+        top: 1rem;
         border-radius: 4px;
         z-index: 10;
-        right: 5%;
+        right: 1rem;
     }
 
         #menuToggle input {
             display: flex;
-            width: 15rem;
-            height: 15rem;
+            width: 5rem;
+            height: 5rem;
             position: absolute;
             cursor: pointer;
             opacity: 0;
             z-index: 2;
-            top: -5.1rem;
-            left: -5.1rem;
+            top: -2.5rem;
+            left: -2rem;
         }
 
         #menuToggle span {
@@ -425,7 +425,7 @@
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
             pointer-events: none;*/
             /**/
-            display: flex;
+            /*  display: flex;
             width: 15vw;
             max-width: 60px;
             max-height: 5px;
@@ -433,6 +433,20 @@
             margin-bottom: 3vh;
             position: relative;
             background: #ffffff;
+            border-radius: 3px;
+            z-index: 10000000000000;
+            transform-origin: 5px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+            pointer-events: none;*/
+            /**/
+            display: flex;
+            width: 2rem;
+            max-width: 2rem;
+            max-height: 0.2rem;
+            height: 0.2rem;
+            margin-bottom: 0.3rem;
+            position: relative;
+            background: cyan;
             border-radius: 3px;
             z-index: 10000000000000;
             transform-origin: 5px 0px;
@@ -450,8 +464,9 @@
 
         #menuToggle input:checked ~ span {
             opacity: 1;
-            transform: rotate(45deg) translate(-2px, 2px);
-            background: #36383F;
+            /*transform: rotate(45deg) translate(-2px, 2px);*/
+            transform: rotate( 45deg ) translate(-2px, -1px);
+            background: #008b8b;
         }
 
             #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -460,7 +475,8 @@
             }
 
             #menuToggle input:checked ~ span:nth-last-child(2) {
-                transform: rotate(-45deg) translate(0, -5px);
+                /*transform: rotate(-45deg) translate(0, -5px);*/
+                transform: rotate( -45deg ) translate(0, 0);
             }
 
     #menu {
