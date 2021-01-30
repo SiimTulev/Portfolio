@@ -141,13 +141,12 @@ body {
 main {
     /*    background-color: rgba(255, 255, 255, 0.2);
 */ /*margin: 0px auto;
-    width: 100%;*//*
+    width: 100%;*/ /*
     max-width: 2560px;
     min-height: 100vh;*/
-    
-    overflow: auto; /*IF REMOVED, BUGS APPEAR*/
-/*    position: relative;*/
-
+    /*overflow: auto;*/ /*IF REMOVED, BUGS APPEAR*/
+    overflow: hidden;
+    /*    position: relative;*/
 }
 
 .my-container {

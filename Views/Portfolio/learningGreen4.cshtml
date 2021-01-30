@@ -148,27 +148,54 @@
                 </div>
             </div>
         </div>
-        <div class="my-container about" id="about">
-            <div class="whiteBox">
+        <div class="my-container mySkills" id="mySkills">
+            <div class="bigBox">
                 <div class="flexbox-container">
                     <div class="flexbox-item flexbox-item-1">
-                        Flexbox Item 1
-                        Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
-                        xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
-                        Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
+                        <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Front-End</h1>
+                        <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                        <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
+                        <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                        <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                        <span>Balsamiq Mockups</span>
+                        <br />
+                        <span>Figma</span>
+                        <br />
+                        <span>Invision</span>
+                        <br />
+                        <span>Marvel</span>
+                        <br />
+                        <span>Pen &amp; Paper</span>
+                        <br />
+                        <span>Sketch</span>
+                        <br />
+                        <span>Webflow</span>
+                        <br />
+                        <span>Zeplin</span>
                     </div>
                     <div class="flexbox-item flexbox-item-2">
-                        Flexbox Item 1
-                        Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
-                        xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
-                        Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
+                        <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Back-End</h1>
+                        <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                        <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
+                        <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                        <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                        <span>Balsamiq Mockups</span>
+                        <br />
+                        <span>Figma</span>
+                        <br />
+                        <span>Invision</span>
+                        <br />
+                        <span>Marvel</span>
+                        <br />
+                        <span>Pen &amp; Paper</span>
+                        <br />
+                        <span>Sketch</span>
+                        <br />
+                        <span>Webflow</span>
+                        <br />
+                        <span>Zeplin</span>
                     </div>
-                    <div class="flexbox-item flexbox-item-3">
-                        Flexbox Item 1
-                        Flexbox Item 1Flexbx Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Fle
-                        xbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox
-                        Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1Flexbox Item 1
-                    </div>
+                  
 
                 </div>
             </div>
@@ -177,52 +204,91 @@
 
 
     <style>
+
+
+        .mySkills {
+        }
+
+      
+
                 @@media only screen and (max-width: 1000px) {
                     .flexbox-item {
                         min-width: 600px;
                         /*                font-size: calc(2vw + 1vh + 0.75vmin) !important;
         */
                     }
+                    .flexbox-item-1 {
+                        border-bottom: 3px solid cyan;
+                    }
+                    .flexbox-item-2 {
+                        border-bottom: 3px solid cyan;
+                    }
+
+                    .bigBox {
+                        border: 4px solid cyan;
+                        border-radius: 12px;
+                        z-index: 6;
+                    }
+                   
                 }
 
                 @@media only screen and (min-width: 1000px) {
-                    .about {
+                    .mySkills {
                         max-width: 90%;
+                    }
+                    .flexbox-item-1 {
+                        border-top: 3px solid cyan;
+                        /*border-right: 3px solid #fff;*/
+                        z-index: 5;
+                    }
+
+                    .flexbox-item-2 {
+                        border-top: 3px solid cyan;
+                        /*border-right: 3px solid #fff;*/
+                        z-index: 5;
+                    }
+                    .flexbox-item-3 {
+                        border-top: 3px solid cyan;
+                        z-index: 5;
                     }
                 }
 
 
                 .flexbox-container {
-                    height: 800px;
+                    /*height: 800px;*/
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    align-items: center;
+                    /*align-items: center;*/
                     text-align: center;
+                    font-size:1rem;
+
                 }
 
-                .flexbox-item {
-                    width: 200px;
-                    margin: 10px;
-                    border: 3px solid #fff;
-                    background-color: aqua;
-                    max-width: 80vw;
-                    font-size: 1rem;
-                    text-size-adjust: none;
-                    -webkit-text-size-adjust: none;
-                    -moz-text-size-adjust: none;
-                    -ms-text-size-adjust: none;
-                }
+        .flexbox-item {
+            width: 200px;
+            margin: 10px;
+            /*border: 3px solid #fff;*/
+            /*background-color: aqua;*/
+            /*max-width: 80vw;*/
+            font-size: 1rem;
+            text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            color: #8892b0;
+        }
 
-                .flexbox-item-1 {
-                    min-height: 400px;
-                    flex-grow: 1;
-                }
+        .flexbox-item-1 {
+            min-height: 400px;
+            flex-grow: 1;
 
-                .flexbox-item-2 {
-                    min-height: 400px;
-                    flex-grow: 1;
-                }
+        }
+
+        .flexbox-item-2 {
+            min-height: 400px;
+            flex-grow: 1;
+        }
 
                 .flexbox-item-3 {
                     min-height: 400px;
@@ -254,7 +320,7 @@
 <div id="main-header" class="side-menu">
     <nav>
         <li id="home1" class="Bhome"><a href="#home"><span>Home</span></a></li>
-        <li id="about1" class="Babout"><a href="#about"><span>About</span></a></li>
+        <li id="mySkills1" class="BmySkills"><a href="#mySkills"><span>Skills</span></a></li>
         <li id="contact1" class="Bcontact"><a href="#contact"><span>Contact</span></a></li>
     </nav>
 </div>
@@ -275,8 +341,8 @@
         <span></span>
         <span></span>
         <ul id="menu">
-            <li><a class="selection" href="#">Home</a></li>
-            <li><a class="selection" href="#">About</a></li>
+            <li><a class="selection" href="#home">Home</a></li>
+            <li><a class="selection" href="#mySkills">Skills</a></li>
             <li><a class="selection" href="#">Info</a></li>
             <li><a class="selection" href="#">Contact</a></li>
         </ul>
