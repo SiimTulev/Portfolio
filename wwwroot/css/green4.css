@@ -7,14 +7,18 @@
 
 
 @media only screen and (max-width: 1000px) {
-  /*  html {
+    /*  html {
         font-size: 20px;
     }*/
 
+
+
     .greeting {
-        font-size:1rem !important;
+        font-size: 1rem !important;
         /*font-size: calc(1.5vw + 1.5vh + 0.75vmin) !important;*/
     }
+
+
 
     .realName {
         font-size: 3rem !important;
@@ -34,13 +38,13 @@
     }
 
     .fa {
-       /* font-size: calc(3.2vw + 3.2vh + 1.6vmin) !important;*/
+        /* font-size: calc(3.2vw + 3.2vh + 1.6vmin) !important;*/
     }
 
     .side-menu {
         display: none
     }
-   /* .selection {
+    /* .selection {
         font-size: calc(3.2vw + 3.2vh + 1.6vmin) !important;
         padding-top: calc(1vw + 1vh + 0.5vmin) !important;
         z-index: 3;
@@ -64,7 +68,7 @@
     padding: 0 0 0 2rem;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
 
     #menu {
         opacity: 1;
@@ -77,8 +81,6 @@
     .foggy {
         filter: blur(0px) !important;
     }
-
-
 }
 
 @media only screen and (max-width: 600px) and (orientation:landscape) {
@@ -92,14 +94,10 @@
     html {
         z-index: 0;
     }
-
-  
- 
 }
 
 @media only screen and (max-width: 768px) {
     .whiteBox {
-     
         padding: 80px 0px !important;
     }
 }
@@ -158,8 +156,8 @@ main {
 .home {
     /*    height: auto;*/
     min-height: 100vh;
-/*    REMOVE IF PAGE IS LONGER width: 100%;
-*/    display: flex;
+    /*    REMOVE IF PAGE IS LONGER width: 100%;
+*/ display: flex;
     align-items: center;
     padding-top: 0px;
 }
@@ -185,7 +183,8 @@ h1, h2, h3, h4, h5, a {
     font-size: 1rem;
     font-weight: 400;
     color: cyan;
-    display:block;
+    display: inline-block;
+    opacity: 1;
 }
 
 .realName {
@@ -204,6 +203,10 @@ h1, h2, h3, h4, h5, a {
     opacity: 1;
 }
 
+.hi {
+    font-size: 4rem;
+}
+
 .headerAnimComma {
     display: inline-block;
     opacity: 1;
@@ -213,6 +216,7 @@ h1, h2, h3, h4, h5, a {
     display: inline-block;
     opacity: 1;
     position: absolute;
+    font-size: 4rem;
 }
 
 @media only screen and (max-width: 750px) {
@@ -417,7 +421,7 @@ p {
 }
 
     .btn-5:hover {
-/*        border: 1px solid;*/
+        /*        border: 1px solid;*/
         box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
         outline-color: rgba(255, 255, 255, 0);
         outline-offset: 15px;

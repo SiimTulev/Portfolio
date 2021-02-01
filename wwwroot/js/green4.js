@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //gsap.to('p', { duration: 2, delay: 0.5, opacity: 1, y: 20, delay: 1.9 });
             //gsap.to('.box', { duration: 3, delay: 0.5, opacity: 1, scale: 1, ease: "elastic.out(1, 1)" })
             //gsap.from('.EngForTom', { duration: 1, x: '-100vw', stagger: 0.5 })
-            gsap.from('.side-menu', { duration: 3.5, delay: 3, x: '100vw', ease: "circ.out" })
-            gsap.from('.headerAnimComma', { duration: 3, delay: 4, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
+            gsap.from('.side-menu', { duration: 3.5, delay: 4.5, x: '100vw', ease: "circ.out" })
 
 
             gsap.from('.waves', { duration: 10, opacity: 0, delay: 2, y: '100vh', ease: "circ.out" })
@@ -50,17 +49,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     element.parentNode.removeChild(element);
                 };
             }
+            if ($(window).width() > 1000) {
 
-            tl = new TimelineMax();
+                tl = new TimelineMax();
+                tl.from("#exclamation", 1, { delay: 1, opacity: 0, y: '5vh', ease: Circ.easeOut })
+                    .to("#exclamation", 1, { fontSize: "1rem", ease: "expo.inOut" })
+                    .to("#exclamation", 0.2, { color: "red" })
+                    .to("#exclamation", 0.5, { opacity: 0, y: '-10vh' })
+                    .call(removeElement("#exclamation"));
 
-            tl.from("#exclamation", 3, { delay: 1, opacity: 0, y: '10vh', ease: "elastic.out(1, 1)" })
-                .to("#exclamation", 0.2, { color: "red", })
-                .to("#exclamation", 0.5, { opacity: 0, y: '-10vh' })
-                .call(removeElement("#exclamation"))
+                t2 = new TimelineMax();
+                t2.from('.hi', { duration: 1, delay: 1, opacity: 0, y: '5vh', ease: Circ.easeOut })
+                    .to(".hi", 1, { fontSize: "1rem", ease: "expo.inOut" });
 
+                gsap.from('.headerAnimComma', { duration: 3, delay: 4.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
-            gsap.from('.headerAnim', { duration: 3, delay: 1, opacity: 0, y: '10vh', stagger: 1, ease: "elastic.out(1, 1)" });
+                gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
+            }
 
+            if ($(window).width() <= 1000) {
+
+                tl = new TimelineMax();
+                tl.from("#exclamation", 1, { delay: 2, opacity: 0, fontSize: "1rem", y: '5vh', ease: Circ.easeOut })
+                    .to("#exclamation", 0.2, { color: "red" })
+                    .to("#exclamation", 0.5, { opacity: 0, y: '-10vh' })
+                    .call(removeElement("#exclamation"));
+
+                t2 = new TimelineMax();
+                t2.from('.hi', { duration: 1, delay: 2, opacity: 0, fontSize: "1rem", y: '5vh', ease: Circ.easeOut });
+
+                gsap.from('.headerAnimComma', { duration: 3, delay: 3.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
+
+                gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
+            }
 
             gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
             gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
