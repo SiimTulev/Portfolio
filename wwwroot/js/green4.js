@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 t2.from('.hi', { duration: 1, delay: 1, opacity: 0, y: '5vh', ease: Circ.easeOut })
                     .to(".hi", 1, { fontSize: "1rem", ease: "expo.inOut" });
 
-                gsap.from('.headerAnimComma', { duration: 3, delay: 4.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
+                gsap.from('.headerAnimComma', { duration: 3, delay: 3.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
                 gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
             }
