@@ -83,6 +83,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
             }
 
+
+            t3 = new TimelineMax();
+            t3.from(".box", 1, {
+                delay: 0,
+                
+                width: "60px",
+                height: "60px",
+                background: "aquamarine",
+                boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+            })
+
+                .to(".box", 1, {
+                    width: "60px",
+                    height: "60px",
+                    background: "rgba(0, 40, 40, 0.5)",
+                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+                })
+                .to(".box", 0.5, {
+                    width: "60px",
+                    height: "240px",
+                    background: "rgba(0, 40, 40, 0.5)",
+                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+                })
+                .to(".box", 1, {
+                    width: "480px",
+                    height: "240px",
+                    background: "rgba(0, 40, 40, 0.5)",
+                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeOut
+                })
+                .to(".boxText", 1, {opacity: "1", ease: Circ.easeOut});
+
             gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
             gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
             //gsap.to('.whiteBox', { duration: 3, opacity: 1, scaleY: 1, delay: 3, padding: "1rem", ease: Circ.easeOut  });
