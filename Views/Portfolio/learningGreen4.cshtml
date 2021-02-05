@@ -23,7 +23,7 @@
 @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-@*<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 <script src="~/js/green4.js"></script>
 <script src="~/js/rightSideMenu.js"></script>
 
@@ -250,7 +250,7 @@
             border-radius: 20px;
             width: 60px;
             height: 60px;
-            background: aquamarine;
+            background: rgba(0,255,255,0.5);
             /*box-shadow: 0 0 0 aquamarine, 0 0 0 aquamarine, 10px 10px 10px aquamarine inset, -10px -10px 10px aquamarine inset;*/
             /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;*/
             /* animation-fill-mode: forwards; */
@@ -383,17 +383,19 @@
 
 
         .flexbox-item-1 {
-            border-top: 10px solid rgba(0, 255, 255, 0.5);
+            border-top: 10px solid rgb(0 0 0 / 20%);
             border-radius: 50px;
             min-height: 400px;
             flex-grow: 1;
+            box-shadow: -20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);
         }
 
         .flexbox-item-2 {
-            border-top: 10px solid rgba(0, 255, 255, 0.5);
+            border-top: 10px solid rgb(0 0 0 / 20%);
             border-radius: 50px;
             min-height: 400px;
             flex-grow: 1;
+            box-shadow: 20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);
         }
 
         .flexbox-item-3 {

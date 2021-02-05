@@ -84,35 +84,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
 
 
-            t3 = new TimelineMax();
-            t3.from(".box", 1, {
+            var t3 = new TimelineMax({paused:true});
+            t3.from(".box", 0, {
                 delay: 0,
-                
                 width: "60px",
                 height: "60px",
-                background: "aquamarine",
-                boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+                background: "rgba(0,255,255,0.5)",
+                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
             })
+            .to(".box", 1, {
+                width: "60px",
+                height: "60px",
+                background: "rgba(0, 40, 40, 0.5)",
+                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+            })
+            .to(".box", 0.5, {
+                width: "60px",
+                height: "240px",
+                background: "rgba(0, 40, 40, 0.5)",
+                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+            })
+            .to(".box", 1, {
+                width: "480px",
+                height: "240px",
+                background: "rgba(0, 40, 40, 0.5)",
+                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeOut
+            })
+            .to(".boxText", 1, {opacity: "1", ease: Circ.easeOut});
 
-                .to(".box", 1, {
-                    width: "60px",
-                    height: "60px",
-                    background: "rgba(0, 40, 40, 0.5)",
-                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
-                })
-                .to(".box", 0.5, {
-                    width: "60px",
-                    height: "240px",
-                    background: "rgba(0, 40, 40, 0.5)",
-                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
-                })
-                .to(".box", 1, {
-                    width: "480px",
-                    height: "240px",
-                    background: "rgba(0, 40, 40, 0.5)",
-                    boxShadow: "0px 0px 40px aquamarine, 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeOut
-                })
-                .to(".boxText", 1, {opacity: "1", ease: Circ.easeOut});
+
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".descriptionBox", {
+                scrollTrigger: {
+                    trigger: ".descriptionBox",
+                    start: "0px 80%",
+                    markers: true,
+                    onEnter: () => t3.paused(false)
+
+                },
+            });
+
+            function activateFunction() {
+                t3.time(window.pageYOffset + triggerOffset);
+                requestId = null;
+            }
 
             gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
             gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
