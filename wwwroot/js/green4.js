@@ -64,10 +64,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 gsap.from('.headerAnimComma', { duration: 3, delay: 3.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
-                gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
+                gsap.from('.headerAnimGSAP', { duration: 1.5, delay: 3, opacity: 0, y: '5vh', stagger: 0.5, ease: Circ.easeOut });
             }
 
             if ($(window).width() <= 1000) {
+
+                gsap.from('#menuToggle', { duration: 1, delay: 1, opacity: 0 });
 
                 tl = new TimelineMax();
                 tl.from("#exclamation", 1, { delay: 2, opacity: 0, fontSize: "1rem", y: '5vh', ease: Circ.easeOut })
@@ -80,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 gsap.from('.headerAnimComma', { duration: 3, delay: 3.5, opacity: 0, x: '-1vh', ease: "elastic.out(1, 1)" });
 
-                gsap.from('.headerAnimGSAP', { duration: 1, delay: 3, opacity: 0, y: '5vh', stagger: 1, ease: Circ.easeOut });
+                gsap.from('.headerAnimGSAP', { duration: 1.5, delay: 4, opacity: 0, y: '5vh', stagger: 0.5, ease: Circ.easeOut });
             }
 
 
@@ -89,28 +91,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 delay: 0,
                 width: "60px",
                 height: "60px",
-                background: "rgba(0,255,255,0.5)",
-                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
+                background: "rgba(255,0,0,0.5)",
+                boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 10px 10px 10pxinset"
             })
-            .to(".box", 1, {
-                width: "60px",
-                height: "60px",
-                background: "rgba(0, 40, 40, 0.5)",
-                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
-            })
-            .to(".box", 0.5, {
-                width: "60px",
-                height: "240px",
-                background: "rgba(0, 40, 40, 0.5)",
-                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeInOut
-            })
-            .to(".box", 1, {
-                width: "480px",
-                height: "240px",
-                background: "rgba(0, 40, 40, 0.5)",
-                boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 2px 2px 2px inset", ease: Circ.easeOut
-            })
-            .to(".boxText", 1, {opacity: "1", ease: Circ.easeOut});
+                .to(".box", 1, {
+                    width: "60px",
+                    height: "60px",
+                    background: "rgba(40, 0, 0, 0.5)",
+                    boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 10px 10px 10px inset", ease: "elastic.out(1, 1)"
+                })
+                .to(".box", 0.5, {
+                    delay:0.5,
+                    width: "60px",
+                    height: "240px",
+                    background: "rgba(40, 0, 0, 0.5)",
+                    boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
+                }, '<')
+                .to(".box", 1, {
+                    width: "480px",
+                    height: "240px",
+                    background: "rgba(40, 0, 0, 0.5)",
+                    boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
+                })
+                .to(".box", 1, {
+                    background: "rgba(0, 40, 40, 0.5)",
+                    boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
+                })
+                .to(".boxText", 1, { delay: 0.5, opacity: "1", ease: Circ.easeOut }, '<')
+                .from(".flexbox-item-1, .flexbox-item-2", 1, {
+                    opacity: 0,
+                    ease: Circ.easeOut,
+                    y: '10vh'
+                    //boxShadow: "0px 0px 0px rgba(50, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0)"
+
+                }, '<')
+                .to(".flexbox-item-1", 1, {
+                    //opacity: 0,
+                    boxShadow: "-20px 19px 38px rgba(0, 50, 50, 0.30), 0 15px 12px rgba(0,0,0,0.22)",
+                    ease: Linear.easeNone
+
+                })
+                .to(".flexbox-item-2", 1, {
+                    //opacity: 0,
+                    boxShadow: "20px 19px 38px rgba(0, 50, 50, 0.30), 0 15px 12px rgba(0,0,0,0.22)",
+                    ease: Linear.easeNone
+
+                }, '<')
+                .to(".flexbox-items-text", 1, {
+                    delay:0.5,
+                    opacity: 1,
+
+
+                }, '<');
 
 
             gsap.registerPlugin(ScrollTrigger);
@@ -124,10 +156,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 },
             });
 
-            function activateFunction() {
-                t3.time(window.pageYOffset + triggerOffset);
-                requestId = null;
-            }
+
+
+       
 
             gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
             gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });

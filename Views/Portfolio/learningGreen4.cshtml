@@ -168,48 +168,52 @@
 
                 <div class="flexbox-container">
                     <div class="flexbox-item flexbox-item-1">
-                        <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Front-End</h1>
-                        <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                        <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
-                        <p>UX, UI, Web, Mobile, Apps, Logos</p>
-                        <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
-                        <span>Balsamiq Mockups</span>
-                        <br />
-                        <span>Figma</span>
-                        <br />
-                        <span>Invision</span>
-                        <br />
-                        <span>Marvel</span>
-                        <br />
-                        <span>Pen &amp; Paper</span>
-                        <br />
-                        <span>Sketch</span>
-                        <br />
-                        <span>Webflow</span>
-                        <br />
-                        <span>Zeplin</span>
+                        <div class="flexbox-items-text">
+                            <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Front-End</h1>
+                            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                            <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
+                            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                            <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                            <span>Balsamiq Mockups</span>
+                            <br />
+                            <span>Figma</span>
+                            <br />
+                            <span>Invision</span>
+                            <br />
+                            <span>Marvel</span>
+                            <br />
+                            <span>Pen &amp; Paper</span>
+                            <br />
+                            <span>Sketch</span>
+                            <br />
+                            <span>Webflow</span>
+                            <br />
+                            <span>Zeplin</span>
+                        </div>
                     </div>
                     <div class="flexbox-item flexbox-item-2">
-                        <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Back-End</h1>
-                        <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                        <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
-                        <p>UX, UI, Web, Mobile, Apps, Logos</p>
-                        <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
-                        <span>Balsamiq Mockups</span>
-                        <br />
-                        <span>Figma</span>
-                        <br />
-                        <span>Invision</span>
-                        <br />
-                        <span>Marvel</span>
-                        <br />
-                        <span>Pen &amp; Paper</span>
-                        <br />
-                        <span>Sketch</span>
-                        <br />
-                        <span>Webflow</span>
-                        <br />
-                        <span>Zeplin</span>
+                        <div class="flexbox-items-text">
+                            <figure class="image"><img class="is-skill-icon" src="img/icons/designer.svg"></figure><h1 class="title is-size-4 is-spaced">Back-End</h1>
+                            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                            <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
+                            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                            <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                            <span>Balsamiq Mockups</span>
+                            <br />
+                            <span>Figma</span>
+                            <br />
+                            <span>Invision</span>
+                            <br />
+                            <span>Marvel</span>
+                            <br />
+                            <span>Pen &amp; Paper</span>
+                            <br />
+                            <span>Sketch</span>
+                            <br />
+                            <span>Webflow</span>
+                            <br />
+                            <span>Zeplin</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,10 +240,11 @@
             Display: flex;
             justify-content: center;
             align-items: center;
+            height: 240px; /*So if user cliks on #about link, it will go to the correct position with first click.*/
         }
 
         .boxText {
-            opacity:0;
+            opacity: 0;
             width: 90%;
             justify-content: center;
             align-items: center;
@@ -250,7 +255,8 @@
             border-radius: 20px;
             width: 60px;
             height: 60px;
-            background: rgba(0,255,255,0.5);
+            /*background: rgba(0,255,255,0.5);*/
+            background: rgba(255,0,0,0.5);
             /*box-shadow: 0 0 0 aquamarine, 0 0 0 aquamarine, 10px 10px 10px aquamarine inset, -10px -10px 10px aquamarine inset;*/
             /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;*/
             /* animation-fill-mode: forwards; */
@@ -380,22 +386,28 @@
             flex-direction: column;
         }
 
-
+        .flexbox-items-text {
+            opacity: 0;
+        }
 
         .flexbox-item-1 {
+            opacity: 1;
             border-top: 10px solid rgb(0 0 0 / 20%);
             border-radius: 50px;
             min-height: 400px;
             flex-grow: 1;
-            box-shadow: -20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            /*box-shadow: -20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);*/
+            box-shadow: -20px 19px 38px rgba(50,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         }
 
         .flexbox-item-2 {
+            opacity: 1;
             border-top: 10px solid rgb(0 0 0 / 20%);
             border-radius: 50px;
             min-height: 400px;
             flex-grow: 1;
-            box-shadow: 20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            /*box-shadow: 20px 19px 38px rgba(0,50,50,0.30), 0 15px 12px rgba(0,0,0,0.22);*/
+            box-shadow: 20px 19px 38px rgba(50,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         }
 
         .flexbox-item-3 {
@@ -441,9 +453,12 @@
 </ul>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+<div class="closeInvisibleButtonLeft"></div>
 
 <nav role="navigation">
+
     <div id="menuToggle">
+
         <input id="phoneMenu" type="checkbox" />
         <span></span>
         <span></span>
@@ -714,12 +729,24 @@
         padding: 100px 40px 60px 40px;
         overflow-y: auto;
     }
+    /*TODO Close menu if clicked or scrolled on it*/
+    .closeInvisibleButtonLeft {
+        right: 0;
+        height: 100%;
+        width: 50%;
+        right: 50vw;
+        margin: 00px 0 0 -50px;
+        background: red;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
 
 
-        #menu li {
-            padding: 10px 0;
-            transition-delay: 2s;
-        }
+    #menu li {
+        padding: 10px 0;
+        transition-delay: 2s;
+    }
 
     #menuToggle input:checked ~ ul {
         transform: none;
