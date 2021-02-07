@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             var t3 = new TimelineMax({paused:true});
             t3.from(".box", 0, {
-                delay: 0,
                 width: "60px",
                 height: "60px",
                 background: "rgba(255,0,0,0.5)",
@@ -102,17 +101,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 })
                 .to(".box", 0.5, {
                     delay:0.5,
-                    width: "60px",
-                    height: "240px",
-                    background: "rgba(40, 0, 0, 0.5)",
-                    boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
-                }, '<')
-                .to(".box", 1, {
                     width: "480px",
                     height: "240px",
                     background: "rgba(40, 0, 0, 0.5)",
                     boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
-                })
+                }, '<')
                 .to(".box", 1, {
                     background: "rgba(0, 40, 40, 0.5)",
                     boxShadow: "0px 0px 40px rgba(0,255,255,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 0px 0px 0px inset", ease: Linear.easeNone
