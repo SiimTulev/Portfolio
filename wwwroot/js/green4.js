@@ -172,6 +172,9 @@ $(window).resize(function () {
     if ($(window).width() > 1000) {
         gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
         document.getElementById('phoneMenu').checked = false;
+        document.getElementById('closeInvisibleButtonLeft').checked = false;
+        $('#closeInvisibleButtonLeft').removeClass("openInvisibleButton");
+
 
 
     }

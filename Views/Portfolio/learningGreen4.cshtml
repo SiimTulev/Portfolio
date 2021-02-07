@@ -347,6 +347,23 @@
             .flexbox-about {
                 width: 100%;
             }
+
+            #closeInvisibleButtonLeft {
+                opacity: 0;
+                right: 0;
+                height: 100%;
+                width: 50%;
+                right: 50vw;
+                /*background: red;*/
+                top: 0;
+                left: 0;
+                position: fixed;
+                transform: translate(120vw, 0);
+            }
+
+            .openInvisibleButton {
+                transform: translate(0vw, 0) !important;
+            }
         }
 
         @@media only screen and (min-width: 1001px) {
@@ -453,7 +470,7 @@
 </ul>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
-<div class="closeInvisibleButtonLeft"></div>
+<input id="closeInvisibleButtonLeft" type="button" />
 
 <nav role="navigation">
 
@@ -474,12 +491,14 @@
 
 <script>
     $('#phoneMenu').change(function () {
-        if ($(this).is(":checked")) {
+        if ($(this).is(":checked") && $) {
             gsap.to('.content__wrapper', 1, { filter: "blur(10px)" });
+            $('#closeInvisibleButtonLeft').addClass("openInvisibleButton");
 
             //$('.content__wrapper').addClass("foggy");
         } else {
             gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
+            $('#closeInvisibleButtonLeft').removeClass("openInvisibleButton");
 
             //$('.content__wrapper').removeClass("foggy");
         }
@@ -651,6 +670,8 @@
                 transform-origin: 0% 100%;
             }
 
+   
+
         #menuToggle input:checked ~ span {
             opacity: 1;
             /*transform: rotate(45deg) translate(-2px, 2px);*/
@@ -729,25 +750,18 @@
         padding: 100px 40px 60px 40px;
         overflow-y: auto;
     }
-    /*TODO Close menu if clicked or scrolled on it*/
-    .closeInvisibleButtonLeft {
-        right: 0;
-        height: 100%;
-        width: 50%;
-        right: 50vw;
-        margin: 00px 0 0 -50px;
-        background: red;
-        top: 0;
-        left: 0;
-        position: fixed;
+        /*TODO Close menu if clicked or scrolled on it*/
+
+
+
+        #menu li {
+            padding: 10px 0;
+            transition-delay: 2s;
+        }
+
+    #menuToggle input:checked ~ ul {
+        transform: none;
     }
-
-
-    #menu li {
-        padding: 10px 0;
-        transition-delay: 2s;
-    }
-
     #menuToggle input:checked ~ ul {
         transform: none;
     }
@@ -800,11 +814,21 @@
 
 
 <script>
+    /*NOT NEEDED?*/
     $('.clicker').click(function () {
         $('body').toggleClass('overlay');
     });
 
+    var invisibleButton = document.getElementById('closeInvisibleButtonLeft'); // grab a reference to your element
+    invisibleButton.addEventListener('click', closePhoneMenu); 
 
+    // Detect if clicked on invisible button
+    function closePhoneMenu() {
+        gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
+        document.getElementById('phoneMenu').checked = false;
+        $('#closeInvisibleButtonLeft').removeClass("openInvisibleButton");
+
+    }
     //gsap.registerPlugin(ScrollTrigger);
 
     //gsap.to(".first", {
