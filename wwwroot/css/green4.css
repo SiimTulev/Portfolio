@@ -79,7 +79,7 @@
     }
 
     .foggy {
-        filter: blur(0px) !important;
+        filter: grayscale(0%) blur(0px) !important; /*if grayscale(0%) not used, it flickers */
     }
 }
 

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //gsap.to('p', { duration: 2, delay: 0.5, opacity: 1, y: 20, delay: 1.9 });
             //gsap.to('.box', { duration: 3, delay: 0.5, opacity: 1, scale: 1, ease: "elastic.out(1, 1)" })
             //gsap.from('.EngForTom', { duration: 1, x: '-100vw', stagger: 0.5 })
-            gsap.from('.side-menu', { duration: 3.5, delay: 4.5, x: '100vw', ease: "circ.out" })
+            gsap.from('.side-menu', { duration: 3, delay: 3, x: '100vw', ease: "circ.out" })
 
 
             gsap.from('.waves', { duration: 10, opacity: 0, delay: 2, y: '100vh', ease: "circ.out" })
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 scrollTrigger: {
                     trigger: ".descriptionBox",
                     start: "0px 80%",
-                    markers: true,
+                    //markers: true,
                     onEnter: () => t3.paused(false)
 
                 },
@@ -170,7 +170,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // If screen size goes bigger, remove blur and close phone side menu
 $(window).resize(function () {
     if ($(window).width() > 1000) {
-        gsap.to('.content__wrapper', 1, { filter: "blur(0px)" });
+
+        TweenMax.fromTo(".content__wrapper", 1, {
+            filter: 'blur(10px)' 
+        }, {
+            filter: 'grayscale(0%) blur(0px)', // if grayscale(0%) not used, it flickers 
+            immediateRender: false,
+        });
+
+        //gsap.to('.content__wrapper', 1, { filter: "blur(0px)", immediateRender: false});
+
         document.getElementById('phoneMenu').checked = false;
         document.getElementById('closeInvisibleButtonLeft').checked = false;
         $('#closeInvisibleButtonLeft').removeClass("openInvisibleButton");
