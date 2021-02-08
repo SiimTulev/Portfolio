@@ -149,6 +149,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 },
             });
 
+            gsap.to(".flexbox-container-contact", {
+                scrollTrigger: {
+                    trigger: ".flexbox-container-contact",
+                    start: "0px 80%",
+                    markers: true,
+                },
+                opacity: 1,
+                duration:2,
+                y: '-10vh'
+            });
+
 
 
        

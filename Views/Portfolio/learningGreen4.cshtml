@@ -2,7 +2,8 @@
     //Layout = null;
     Layout = "~/Views/Shared/EnableBlazor.cshtml";
 }
-
+<title>Siim Tulev Portfolio</title>
+<meta name="description" content="Back-End Web developer portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -223,10 +224,36 @@
                 </div>
             </div>
         </div>
+
+        <div class="my-container contact" id="contact">
+                <div class="flexbox-container-contact">
+                    <div class="flexbox-contact">
+                        <h1 style="font-size: 3rem;">Get in touch</h1>
+                        <p>
+                            I'm currently looking for new opportunities.
+                        </p>
+                        <div class="buttonsContainerBottom headerAnim headerAnimGSAP">
+                            <a href="mailto:siimtulev@gmail.com" class="btn btn-5"> Contact me</a>
+                            
+                        </div>
+                    </div>
+                 </div>
+        </div>
     </div>
 
 
     <style>
+
+        .buttonsContainerBottom {
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            max-width: 100%;
+        }
+
 
         .is-skill-icon {
             height: 48px;
@@ -288,9 +315,33 @@
             flex-direction: column;
         }
 
-        .about {
+
+        .flexbox-container-contact {
+            /*height: 800px;*/
+            opacity:0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1rem;
         }
 
+        .flexbox-contact {
+            width: 60%;
+            margin: 10px;
+            /*border: 3px solid #fff;*/
+            /*background-color: aqua;*/
+            /*max-width: 80vw;*/
+            font-size: 1rem;
+            text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            color: black;
+            display: flex;
+            flex-direction: column;
+        }
 
 
         @@media only screen and (max-width: 1001px) {

@@ -250,16 +250,16 @@ h1, h2, h3, h4, h5, a {
     
 }
 
-@media (min-width: 600px) {
-    .buttonsContainer {
-        flex-direction: row;
-        /*            justify-content: end;
-*/
-    }
-}
 
-.column,
-.columns {
+    @media (min-width: 600px) {
+        .buttonsContainer {
+            flex-direction: row;
+            /*            justify-content: end;
+*/
+        }
+    }
+
+    .column, .columns {
     width: 100%;
     float: left;
     box-sizing: border-box;
