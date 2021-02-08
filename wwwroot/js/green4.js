@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
 
 
-            var t3 = new TimelineMax({paused:true});
+            var t3 = new TimelineMax({ paused: true });
             t3.from(".box", 0, {
                 width: "60px",
                 height: "60px",
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     boxShadow: "0px 0px 40px rgba(255,0,0,0.5), 0 0 0 black, 0 0 0 #cccccc inset, 10px 10px 10px inset", ease: "elastic.out(1, 1)"
                 })
                 .to(".box", 0.5, {
-                    delay:0.5,
+                    delay: 0.5,
                     width: "480px",
                     height: "240px",
                     background: "rgba(40, 0, 0, 0.5)",
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 }, '<')
                 .to(".flexbox-items-text", 1, {
-                    delay:0.5,
+                    delay: 0.5,
                     opacity: 1,
 
 
@@ -153,16 +153,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 scrollTrigger: {
                     trigger: ".flexbox-container-contact",
                     start: "0px 80%",
-                    markers: true,
                 },
                 opacity: 1,
-                duration:2,
+                duration: 2,
                 y: '-10vh'
             });
-
-
-
-       
 
             gsap.to('.loadingBackground', 0, { delay: 1, opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingBackground") });
             gsap.to('.SVG_BootstrapDontTouch', 2, { opacity: 0, autoAlpha: 0, onComplete: removeElement("#loadingEffectWrap") });
@@ -176,7 +171,7 @@ $(window).resize(function () {
     if ($(window).width() > 1000) {
 
         TweenMax.fromTo(".content__wrapper", 1, {
-            filter: 'blur(10px)' 
+            filter: 'blur(10px)'
         }, {
             filter: 'grayscale(0%) blur(0px)', // if grayscale(0%) not used, it flickers 
             immediateRender: false,
